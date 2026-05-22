@@ -1,0 +1,13 @@
+{
+  "name": "Zentek360 Technology Solutions",
+  "short_name": "Zentek360",
+  "description": "Partner de Ingeniería Tecnológica 360° — Software, Cloud y Ciberseguridad.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07090F",
+  "theme_color": "#F26520",
+  "icons": [
+    { "src": "/FAVICON - ZENTEK 360.jpg", "sizes": "192x192", "type": "image/jpeg" },
+    { "src": "/FAVICON - ZENTEK 360.jpg", "sizes": "512x512", "type": "image/jpeg" }
+  ]
+}
