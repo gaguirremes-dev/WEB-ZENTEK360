@@ -1,0 +1,150 @@
+/* ============================================
+   ZENTEK360 — Estilos Corporativos
+   Fuentes: Inter (web) + League Spartan (logo)
+   Paleta: #0b142c | #f3580e | #d8d7f5 | #b0aab3 | #ffffff
+============================================ */
+
+/* ── Reset y base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #f3580e #e8eaf0;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #e8eaf0; }
+::-webkit-scrollbar-thumb { background: #f3580e; border-radius: 2px; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #0b142c;
+  background: #ffffff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Keyframes ── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: .5; transform: scale(.85); }
+  50%       { opacity: 1;  transform: scale(1); }
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+@keyframes bar-fill {
+  from { width: 0; }
+}
+
+/* ── Scroll Reveal ── */
+.rv {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.rv.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+.d1 { transition-delay: .10s; }
+.d2 { transition-delay: .20s; }
+.d3 { transition-delay: .30s; }
+.d4 { transition-delay: .40s; }
+.d5 { transition-delay: .50s; }
+.d6 { transition-delay: .60s; }
+
+/* ── Marquee ── */
+.mq-track {
+  animation: marquee 38s linear infinite;
+  display: flex;
+  width: max-content;
+}
+.mq-track:hover { animation-play-state: paused; }
+
+/* ── Cards Servicios ── */
+.svc-card {
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.svc-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(11, 20, 44, .12);
+}
+.svc-card .svc-icon {
+  transition: background .3s ease;
+}
+.svc-card:hover .svc-icon {
+  background: #f3580e;
+}
+.svc-card:hover .svc-icon svg {
+  stroke: #fff;
+}
+.svc-card:hover .svc-icon svg path,
+.svc-card:hover .svc-icon svg rect,
+.svc-card:hover .svc-icon svg circle {
+  stroke: #fff;
+}
+
+/* ── Cards Sectores ── */
+.sector-card {
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.sector-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(11, 20, 44, .10);
+  border-color: #f3580e;
+}
+
+/* ── Timeline connector ── */
+.tl-connector {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, #f3580e, #d8d7f5);
+  margin-top: 27px;
+}
+.tl-step { flex: 1; }
+
+/* ── Barras animadas ── */
+.bar-animated {
+  animation: bar-fill 1.6s ease-out forwards;
+}
+
+/* ── Diferenciadores ── */
+.diff-card {
+  transition: transform .3s, box-shadow .3s, border-color .3s;
+}
+.diff-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(11, 20, 44, .09);
+  border-color: #d8d7f5;
+}
+
+/* ── Nav scroll shadow ── */
+#main-nav.scrolled {
+  box-shadow: 0 1px 0 rgba(11, 20, 44, .07), 0 4px 20px rgba(11, 20, 44, .06);
+}
+
+/* ── Animaciones flotantes hero ── */
+.float-slow { animation: float-y 6s ease-in-out infinite; }
+.float-mid  { animation: float-y 4.5s ease-in-out infinite; animation-delay: .8s; }
+
+/* ── Pulse dot ── */
+.pulse { animation: pulse-dot 2s ease-in-out infinite; }
