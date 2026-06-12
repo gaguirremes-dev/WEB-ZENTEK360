@@ -35,6 +35,10 @@
 
 <!-- Tailwind CSS CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
+
+<!-- GSAP + ScrollTrigger (showcase orbital Z-BOT) -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script>
   tailwind.config = {
     theme: {
@@ -285,6 +289,45 @@
 
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════
+     SHOWCASE ORBITAL Z-BOT
+═══════════════════════ -->
+<section id="showcase" class="zb-showcase" aria-label="Z-BOT y nuestros paquetes">
+  <div class="zb-pin">
+
+    <!-- Encabezado -->
+    <div class="zb-head">
+      <p class="zb-eyebrow">Conoce a Z-BOT</p>
+      <h2 class="zb-title">Nuestros paquetes, <span>en órbita</span></h2>
+      <p class="zb-sub">Desplázate para descubrir las soluciones que impulsan a cada tipo de empresa.</p>
+    </div>
+
+    <!-- Escenario 3D -->
+    <div class="zb-stage" id="zb-stage">
+      <div class="zb-glow"></div>
+      <div class="zb-rings" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+
+      <!-- Productos en órbita (posicionados por JS) -->
+      <div class="zb-orbit" id="zb-orbit">
+        <figure class="zb-prod" data-full="images/productos/corporativo-full.webp"   data-title="Paquete Corporativo"><img src="images/productos/corporativo.webp"   alt="Paquete Corporativo"   loading="lazy" decoding="async"><figcaption>Corporativo</figcaption></figure>
+        <figure class="zb-prod" data-full="images/productos/empresarial-full.webp"   data-title="Paquete Empresarial"><img src="images/productos/empresarial.webp"   alt="Paquete Empresarial"   loading="lazy" decoding="async"><figcaption>Empresarial</figcaption></figure>
+        <figure class="zb-prod" data-full="images/productos/emprendedores-full.webp" data-title="Paquete Emprendedores"><img src="images/productos/emprendedores.webp" alt="Paquete Emprendedores" loading="lazy" decoding="async"><figcaption>Emprendedores</figcaption></figure>
+        <figure class="zb-prod" data-full="images/productos/mype-full.webp"          data-title="Paquete MYPE"><img src="images/productos/mype.webp"          alt="Paquete MYPE"          loading="lazy" decoding="async"><figcaption>MYPE</figcaption></figure>
+        <figure class="zb-prod" data-full="images/productos/publicidad-full.webp"    data-title="Presencia Digital Profesional"><img src="images/productos/publicidad.webp"    alt="Presencia digital profesional" loading="lazy" decoding="async"><figcaption>Presencia Digital</figcaption></figure>
+      </div>
+
+      <!-- Robot central -->
+      <img class="zb-robot" id="zb-robot" src="images/zbot/thumbs.webp" alt="Z-BOT, asistente de ZENTEK360" decoding="async">
+    </div>
+
+    <p class="zb-scrollhint" aria-hidden="true">
+      <span class="zb-mouse"></span> Scroll
+    </p>
   </div>
 </section>
 
@@ -718,6 +761,11 @@
   <div class="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-secondary/5 pointer-events-none"></div>
   <div class="absolute -bottom-40 -left-40 w-[400px] h-[400px] rounded-full bg-aux/5 pointer-events-none"></div>
 
+  <!-- Z-BOT señalando el CTA -->
+  <img src="images/zbot/point.webp" alt="" aria-hidden="true"
+       class="zb-guide hidden lg:block absolute bottom-0 left-[6%] w-[180px] xl:w-[210px] pointer-events-none select-none float-slow">
+
+
   <div class="max-w-[860px] mx-auto px-6 lg:px-10 text-center relative z-10">
     <p class="rv text-[11px] font-bold tracking-[.2em] uppercase text-secondary/80 mb-6">Próximo Paso</p>
     <h2 class="rv d1 font-spartan text-[clamp(32px,5vw,62px)] font-black tracking-tight text-white leading-tight mb-6">
@@ -873,6 +921,22 @@
   </div>
 
 </footer>
+
+<!-- ═══════════════════════
+     LIGHTBOX PRODUCTOS
+═══════════════════════ -->
+<div id="zb-lightbox" class="zb-lb" role="dialog" aria-modal="true" aria-label="Detalle del paquete" hidden>
+  <button class="zb-lb-close" id="zb-lb-close" aria-label="Cerrar">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l10 10M15 5L5 15"/></svg>
+  </button>
+  <figure class="zb-lb-fig">
+    <img id="zb-lb-img" src="" alt="">
+    <figcaption id="zb-lb-cap"></figcaption>
+  </figure>
+  <a href="#contacto" class="zb-lb-cta" id="zb-lb-cta">Solicitar este paquete
+    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 7.5h10M8.5 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</div>
 
 <!-- ═══════════════════════
      JAVASCRIPT
