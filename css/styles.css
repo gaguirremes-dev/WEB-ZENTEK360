@@ -361,3 +361,176 @@ body {
   .zb-robot, .zb-rings span, .zb-mouse::after, .float-slow, .float-mid { animation: none !important; }
   .zb-lb, .zb-lb-fig { transition: none !important; }
 }
+
+/* ============================================
+   Z-BOT 3 — ASISTENTE CHAT
+============================================ */
+.zbot-pill {
+  background: #fff;
+  border: 1px solid rgba(11,20,44,.10);
+  color: rgba(11,20,44,.60);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 7px 16px;
+  border-radius: 99px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.zbot3-frame {
+  position: relative;
+  width: clamp(300px, 90vw, 420px);
+  height: 500px;
+}
+.zbot3-robot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: clamp(320px, 88%, 430px);
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 24px 48px rgba(11,20,44,.18));
+  animation: float-y 5.5s ease-in-out infinite;
+}
+.zbot3-chat {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 195px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 10;
+  pointer-events: none;
+}
+.zbot-bubble {
+  background: #fff;
+  border: 1px solid rgba(11,20,44,.08);
+  border-radius: 16px 16px 16px 4px;
+  padding: 11px 14px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #0b142c;
+  line-height: 1.5;
+  box-shadow: 0 4px 18px rgba(11,20,44,.10);
+  animation: bubble-appear 3.8s ease-in-out forwards;
+}
+.zbot-badge {
+  display: inline-block;
+  background: #f3580e;
+  color: #fff;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  padding: 2px 9px;
+  border-radius: 99px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+@keyframes bubble-appear {
+  0%   { opacity: 0; transform: translateY(10px) scale(.92); }
+  12%  { opacity: 1; transform: translateY(0) scale(1); }
+  80%  { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-6px); }
+}
+
+/* ============================================
+   Z-BOT 4 — PROYECTOS CARD STRIPS
+============================================ */
+.zbot4-block {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  height: 580px;
+}
+.zbot4-strips {
+  flex: 1;
+  display: flex;
+  gap: 14px;
+  overflow: hidden;
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 12%, #000 88%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 12%, #000 88%, transparent 100%);
+}
+.zbot4-strip-wrap {
+  flex: 1;
+  overflow: hidden;
+}
+.zbot4-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.strip-up   { animation: strip-scroll-up   26s linear infinite; }
+.strip-down { animation: strip-scroll-down 26s linear infinite; }
+@keyframes strip-scroll-up {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+@keyframes strip-scroll-down {
+  0%   { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
+}
+.zbot4-card {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 14px;
+  padding: 16px 18px;
+  flex-shrink: 0;
+  transition: background .2s ease;
+}
+.zbot4-card:hover { background: rgba(255,255,255,.10); }
+.zbot4-card-tag {
+  font-size: 10px;
+  font-weight: 700;
+  color: #f3580e;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  margin-bottom: 6px;
+}
+.zbot4-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+.zbot4-card-desc {
+  font-size: 12px;
+  color: rgba(255,255,255,.40);
+  line-height: 1.5;
+}
+.zbot4-robot-wrap {
+  width: 220px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.zbot4-robot {
+  height: 540px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,.45));
+  animation: float-y 5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+@media (max-width: 1279px) {
+  .zbot4-robot-wrap { width: 160px; }
+  .zbot4-robot { height: 460px; }
+}
+@media (max-width: 1023px) {
+  .zbot4-block { height: 480px; }
+  .zbot4-robot-wrap { display: none; }
+}
+@media (max-width: 640px) {
+  .zbot4-block { height: 380px; }
+  .zbot4-strips { flex-direction: column; gap: 10px; }
+  .zbot4-strip-wrap:last-child { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .strip-up, .strip-down,
+  .zbot4-robot, .zbot3-robot { animation: none !important; }
+  .zbot-bubble { animation: none !important; opacity: 1 !important; }
+}
