@@ -1,0 +1,73 @@
+# ═══════════════════════════════════════════════
+#  ZENTEK360 — Apache / cPanel Configuration
+# ═══════════════════════════════════════════════
+
+# ── 1. DESHABILITAR LISTADO DE DIRECTORIOS ──────
+# Impide que Apache muestre "Name / Last Modified / Size"
+# cuando Google u otros visitan una carpeta sin index.
+Options -Indexes
+
+# ── 2. DOCUMENTO POR DEFECTO ────────────────────
+DirectoryIndex index.html
+
+# ── 3. REDIRIGIR www → sin www (canónica) ───────
+# Evita contenido duplicado entre www y sin www.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # www → no-www
+  RewriteCond %{HTTP_HOST} ^www\.zentek360\.com [NC]
+  RewriteRule ^ https://zentek360.com%{REQUEST_URI} [R=301,L]
+
+  # Forzar HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+# ── 4. CABECERAS DE SEGURIDAD ────────────────────
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# ── 5. CACHÉ DE ACTIVOS ESTÁTICOS ───────────────
+# Mejora velocidad de carga (señal de ranking en Google)
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Imágenes
+  ExpiresByType image/jpeg        "access plus 6 months"
+  ExpiresByType image/png         "access plus 6 months"
+  ExpiresByType image/webp        "access plus 6 months"
+  ExpiresByType image/svg+xml     "access plus 6 months"
+  ExpiresByType image/x-icon      "access plus 1 year"
+
+  # CSS y JS
+  ExpiresByType text/css          "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+
+  # Fuentes
+  ExpiresByType font/woff2        "access plus 1 year"
+  ExpiresByType font/woff         "access plus 1 year"
+
+  # HTML — corto para que Google siempre vea la versión actualizada
+  ExpiresByType text/html         "access plus 1 hour"
+</IfModule>
+
+# ── 6. COMPRESIÓN GZIP ──────────────────────────
+# Reduce el peso de los archivos transferidos
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript
+  AddOutputFilterByType DEFLATE application/json text/xml image/svg+xml
+</IfModule>
+
+# ── 7. BLOQUEAR ARCHIVOS SENSIBLES ──────────────
+<FilesMatch "(\.htaccess|\.htpasswd|cpanel\.yml|\.env|optimize_assets\.py)$">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
+
+# ── 8. PÁGINA DE ERROR PERSONALIZADA ────────────
+ErrorDocument 404 /index.html
