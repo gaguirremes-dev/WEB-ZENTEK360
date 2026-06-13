@@ -1,4 +1,12 @@
 User-agent: *
 Allow: /
 
+# Archivos de prueba y desarrollo — no indexar
+Disallow: /preview-hero.html
+Disallow: /optimize_assets.py
+
+# Archivos de configuración — no indexar
+Disallow: /manifest.json
+Disallow: /cpanel.yml
+
 Sitemap: https://zentek360.com/sitemap.xml
