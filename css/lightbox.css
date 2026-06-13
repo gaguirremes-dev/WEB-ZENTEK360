@@ -1,0 +1,249 @@
+﻿/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   LIGHTBOX PROYECTOS â€” CARRUSEL
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.proj-lb {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  background: rgba(5,9,22,.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+.proj-lb[hidden] { display: none; }
+.proj-lb.is-open  { opacity: 1; }
+
+.proj-lb-inner {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  width: 100%;
+  max-width: 920px;
+  transform: translateY(28px) scale(.96);
+  transition: transform .35s cubic-bezier(.22,1,.36,1);
+}
+.proj-lb.is-open .proj-lb-inner { transform: translateY(0) scale(1); }
+
+/* â”€â”€ Carrusel â”€â”€ */
+.proj-carousel {
+  flex: 1;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #07101e;
+  aspect-ratio: 16/10;
+  min-height: 320px;
+  max-height: 480px;
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 24px 80px rgba(0,0,0,.6);
+}
+
+.proj-car-track {
+  display: flex;
+  height: 100%;
+  transition: transform .38s cubic-bezier(.22,1,.36,1);
+  will-change: transform;
+}
+
+.proj-slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.proj-slide img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+/* Slide placeholder (sin imagen real) */
+.proj-slide-ph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 32px;
+  width: 100%; height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.proj-slide-ph::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 38px,
+    rgba(255,255,255,.022) 38px,
+    rgba(255,255,255,.022) 39px
+  ), repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 38px,
+    rgba(255,255,255,.022) 38px,
+    rgba(255,255,255,.022) 39px
+  );
+}
+.proj-slide-ph-icon {
+  width: 72px; height: 72px;
+  border-radius: 18px;
+  background: rgba(243,88,14,.13);
+  border: 1px solid rgba(243,88,14,.35);
+  display: flex; align-items: center; justify-content: center;
+  color: #f3580e;
+  position: relative; z-index: 1;
+  box-shadow: 0 0 30px rgba(243,88,14,.18);
+}
+.proj-slide-ph-num {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: rgba(255,255,255,.28);
+  position: relative; z-index: 1;
+}
+.proj-slide-ph-label {
+  font-size: 14px; font-weight: 600;
+  color: rgba(255,255,255,.55);
+  position: relative; z-index: 1;
+  text-align: center;
+}
+
+/* NavegaciÃ³n flechas */
+.proj-car-nav {
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  width: 42px; height: 42px;
+  background: rgba(7,12,28,.7);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .2s, border-color .2s, transform .2s;
+  z-index: 4;
+}
+.proj-car-nav:hover {
+  background: #f3580e;
+  border-color: transparent;
+  transform: translateY(-50%) scale(1.08);
+}
+.proj-car-prev { left: 14px; }
+.proj-car-next { right: 14px; }
+
+/* Dots */
+.proj-car-dots {
+  position: absolute;
+  bottom: 16px; left: 50%;
+  transform: translateX(-50%);
+  display: flex; gap: 7px;
+  z-index: 4;
+}
+.proj-car-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.28);
+  border: none; cursor: pointer;
+  transition: background .22s, transform .22s;
+  padding: 0;
+}
+.proj-car-dot.active {
+  background: #f3580e;
+  transform: scale(1.4);
+}
+
+/* â”€â”€ Panel de info â”€â”€ */
+.proj-lb-info {
+  width: 240px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.proj-lb-tag {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: #f3580e;
+  margin: 0;
+}
+.proj-lb-title {
+  font-family: 'League Spartan', sans-serif;
+  font-size: clamp(22px,2.8vw,30px);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.08;
+  margin: 0;
+}
+.proj-lb-desc {
+  font-size: 13.5px;
+  color: rgba(255,255,255,.42);
+  line-height: 1.72;
+  margin: 0;
+}
+.proj-lb-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,.07);
+}
+.proj-lb-counter {
+  font-size: 11px; font-weight: 600;
+  color: rgba(255,255,255,.28);
+  letter-spacing: .06em;
+}
+.proj-lb-badge {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: rgba(243,88,14,.7);
+  background: rgba(243,88,14,.1);
+  border: 1px solid rgba(243,88,14,.2);
+  border-radius: 20px;
+  padding: 3px 10px;
+}
+
+/* â”€â”€ BotÃ³n cerrar â”€â”€ */
+.proj-lb-close {
+  position: fixed;
+  top: 22px; right: 26px;
+  width: 46px; height: 46px;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .22s, transform .22s, border-color .22s;
+  z-index: 10;
+}
+.proj-lb-close:hover {
+  background: #f3580e;
+  border-color: #f3580e;
+  transform: rotate(90deg) scale(1.05);
+}
+
+/* Card interactiva */
+.zbot4-card { cursor: pointer; }
+.zbot4-card:focus-visible {
+  outline: 2px solid #f3580e;
+  outline-offset: 3px;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .proj-lb-inner  { flex-direction: column; gap: 20px; max-height: 90vh; overflow-y: auto; }
+  .proj-lb-info   { width: 100%; }
+  .proj-carousel  { aspect-ratio: 4/3; min-height: 200px; max-height: 260px; }
+  .proj-lb-close  { top: 14px; right: 14px; width: 40px; height: 40px; }
+}
