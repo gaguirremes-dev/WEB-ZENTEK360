@@ -158,19 +158,21 @@ function enviarCorreoSMTP(string $toEmail, string $subject, string $htmlBody, st
     $headers .= 'Subject: ' . $enc($subject) . $eol;
     $headers .= 'Reply-To: ' . EMPRESA_EMAIL . $eol;
     $headers .= 'MIME-Version: 1.0' . $eol;
+    $htmlEncoded = chunk_split(base64_encode($htmlBody));
     if ($pdfB64) {
         $b = '----=_Part_' . md5(uniqid());
         $headers .= 'Content-Type: multipart/mixed; boundary="' . $b . '"' . $eol;
-        $body  = '--' . $b . $eol . 'Content-Type: text/html; charset=UTF-8' . $eol . 'Content-Transfer-Encoding: 7bit' . $eol . $eol . $htmlBody . $eol;
+        $body  = '--' . $b . $eol . 'Content-Type: text/html; charset=UTF-8' . $eol . 'Content-Transfer-Encoding: base64' . $eol . $eol . $htmlEncoded . $eol;
         $body .= '--' . $b . $eol . 'Content-Type: application/pdf; name="' . $pdfName . '"' . $eol . 'Content-Transfer-Encoding: base64' . $eol . 'Content-Disposition: attachment; filename="' . $pdfName . '"' . $eol . $eol . $pdfB64 . $eol;
         $body .= '--' . $b . '--';
     } else {
         $headers .= 'Content-Type: text/html; charset=UTF-8' . $eol;
-        $body = $htmlBody;
+        $headers .= 'Content-Transfer-Encoding: base64' . $eol;
+        $body = $htmlEncoded;
     }
     $message = str_replace($eol . '.', $eol . '..', str_replace("\n", $eol, str_replace(["\r\n","\r","\n"], "\n", $headers . $eol . $body)));
     $ctx = stream_context_create(['ssl' => ['verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true]]);
-    $useSSL = in_array(SMTP_PORT, [465, 4655]);
+    $useSSL = in_array(SMTP_PORT, [465]);
     $fp = @stream_socket_client(($useSSL ? 'ssl://' : '') . SMTP_HOST . ':' . SMTP_PORT, $errno, $errstr, 20, STREAM_CLIENT_CONNECT, $ctx);
     if (!$fp) { $err = "Conexión SMTP fallida: $errstr ($errno)"; return false; }
     stream_set_timeout($fp, 20);
@@ -458,9 +460,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </svg>
             </div>
             <h1 class="text-2xl sm:text-3xl font-bold text-primary mb-2">Reclamación Registrada</h1>
+            <?php $emailOk = !empty(array_filter($debugLog, fn($l) => str_contains($l, 'cliente') && str_contains($l, 'ENVIADO'))); ?>
             <p class="text-primary/50 text-sm max-w-md mx-auto leading-relaxed">
-                Tu reclamo ha sido procesado. Se envió un cargo al correo
-                <strong class="text-primary"><?= htmlspecialchars($submittedData['email']) ?></strong>.
+                Tu reclamo ha sido procesado.
+                <?php if ($emailOk): ?>
+                    Se envió un cargo al correo <strong class="text-primary"><?= htmlspecialchars($submittedData['email']) ?></strong>.
+                <?php else: ?>
+                    <span class="text-amber-600 font-medium">No se pudo enviar el correo de confirmación. Guarda o imprime esta página como comprobante.</span>
+                <?php endif; ?>
             </p>
         </div>
 
