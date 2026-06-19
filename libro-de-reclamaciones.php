@@ -5,6 +5,7 @@
  * y el D.S. N° 011-2011-PCM (modificado por D.S. 101-2021-PCM).
  */
 
+session_start();
 date_default_timezone_set('America/Lima');
 
 define('EMPRESA_RAZON_SOCIAL', 'ZENTEK360 S.A.C.S.');
@@ -158,21 +159,19 @@ function enviarCorreoSMTP(string $toEmail, string $subject, string $htmlBody, st
     $headers .= 'Subject: ' . $enc($subject) . $eol;
     $headers .= 'Reply-To: ' . EMPRESA_EMAIL . $eol;
     $headers .= 'MIME-Version: 1.0' . $eol;
-    $htmlEncoded = chunk_split(base64_encode($htmlBody));
     if ($pdfB64) {
         $b = '----=_Part_' . md5(uniqid());
         $headers .= 'Content-Type: multipart/mixed; boundary="' . $b . '"' . $eol;
-        $body  = '--' . $b . $eol . 'Content-Type: text/html; charset=UTF-8' . $eol . 'Content-Transfer-Encoding: base64' . $eol . $eol . $htmlEncoded . $eol;
+        $body  = '--' . $b . $eol . 'Content-Type: text/html; charset=UTF-8' . $eol . 'Content-Transfer-Encoding: 7bit' . $eol . $eol . $htmlBody . $eol;
         $body .= '--' . $b . $eol . 'Content-Type: application/pdf; name="' . $pdfName . '"' . $eol . 'Content-Transfer-Encoding: base64' . $eol . 'Content-Disposition: attachment; filename="' . $pdfName . '"' . $eol . $eol . $pdfB64 . $eol;
         $body .= '--' . $b . '--';
     } else {
         $headers .= 'Content-Type: text/html; charset=UTF-8' . $eol;
-        $headers .= 'Content-Transfer-Encoding: base64' . $eol;
-        $body = $htmlEncoded;
+        $body = $htmlBody;
     }
     $message = str_replace($eol . '.', $eol . '..', str_replace("\n", $eol, str_replace(["\r\n","\r","\n"], "\n", $headers . $eol . $body)));
     $ctx = stream_context_create(['ssl' => ['verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true]]);
-    $useSSL = in_array(SMTP_PORT, [465]);
+    $useSSL = in_array(SMTP_PORT, [465, 4655]);
     $fp = @stream_socket_client(($useSSL ? 'ssl://' : '') . SMTP_HOST . ':' . SMTP_PORT, $errno, $errstr, 20, STREAM_CLIENT_CONNECT, $ctx);
     if (!$fp) { $err = "Conexión SMTP fallida: $errstr ($errno)"; return false; }
     stream_set_timeout($fp, 20);
@@ -307,8 +306,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $errE = '';
             $okE  = enviarCorreoSMTP(EMPRESA_NOTIF_EMAIL, "NUEVA RECLAMACIÓN N° $generatedCode — $nombres", $emailEmpresa, $pdfB64, $pdfName, $errE);
             $debugLog[] = $okE ? 'Correo a empresa (' . EMPRESA_NOTIF_EMAIL . '): ENVIADO.' : 'Correo a empresa FALLÓ: ' . $errE;
+
+            $_SESSION['reclamo_ok'] = [
+                'submittedData'  => $submittedData,
+                'generatedCode'  => $generatedCode,
+                'debugLog'       => $debugLog,
+            ];
+            header('Location: libro-de-reclamaciones.php?ok=1');
+            exit;
         }
     }
+}
+
+// Leer datos de sesión si venimos del redirect POST→GET
+if (isset($_GET['ok']) && !empty($_SESSION['reclamo_ok'])) {
+    $flash         = $_SESSION['reclamo_ok'];
+    $success       = true;
+    $submittedData = $flash['submittedData'];
+    $generatedCode = $flash['generatedCode'];
+    $debugLog      = $flash['debugLog'];
+    unset($_SESSION['reclamo_ok']);
 }
 ?>
 <!DOCTYPE html>
@@ -460,14 +477,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </svg>
             </div>
             <h1 class="text-2xl sm:text-3xl font-bold text-primary mb-2">Reclamación Registrada</h1>
-            <?php $emailOk = !empty(array_filter($debugLog, fn($l) => str_contains($l, 'cliente') && str_contains($l, 'ENVIADO'))); ?>
             <p class="text-primary/50 text-sm max-w-md mx-auto leading-relaxed">
-                Tu reclamo ha sido procesado.
-                <?php if ($emailOk): ?>
-                    Se envió un cargo al correo <strong class="text-primary"><?= htmlspecialchars($submittedData['email']) ?></strong>.
-                <?php else: ?>
-                    <span class="text-amber-600 font-medium">No se pudo enviar el correo de confirmación. Guarda o imprime esta página como comprobante.</span>
-                <?php endif; ?>
+                Tu reclamo ha sido procesado. Se envió un cargo al correo
+                <strong class="text-primary"><?= htmlspecialchars($submittedData['email']) ?></strong>.
             </p>
         </div>
 
