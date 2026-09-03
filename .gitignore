@@ -1,0 +1,9 @@
+# Secrets — never commit. Copy config.smtp.example.php and fill it in locally.
+config.smtp.php
+
+# Runtime data written by libro-de-reclamaciones.php
+reclamaciones/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
