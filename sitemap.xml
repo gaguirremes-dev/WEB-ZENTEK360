@@ -4,12 +4,20 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- Página principal — única URL real del sitio (one-page) -->
+  <!-- Portada -->
   <url>
     <loc>https://zentek360.com/</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- Páginas de servicio -->
+  <url>
+    <loc>https://zentek360.com/software-rrhh-smeta.html</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
 </urlset>
