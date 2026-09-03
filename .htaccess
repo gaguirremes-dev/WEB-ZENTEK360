@@ -26,6 +26,12 @@ DirectoryIndex index.html
   # Carpetas de herramientas de desarrollo. FilesMatch actua sobre el nombre
   # del archivo, no sobre la carpeta, por eso se bloquean aqui.
   RewriteRule ^\.vscode/ - [F,L]
+
+  # El repositorio git esta clonado dentro del document root, asi que .git/
+  # cae bajo una URL publica. Hoy el hosting ya responde 403, pero esa defensa
+  # es configuracion del servidor y puede cambiar sin aviso; con esta regla el
+  # bloqueo viaja con el repo. Sin el, el historial completo seria descargable.
+  RewriteRule (^|/)\.git - [F,L]
 </IfModule>
 
 # ── 4. CABECERAS DE SEGURIDAD ────────────────────
