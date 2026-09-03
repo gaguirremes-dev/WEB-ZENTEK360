@@ -22,6 +22,10 @@ DirectoryIndex index.html
   # Forzar HTTPS
   RewriteCond %{HTTPS} off
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # Carpetas de herramientas de desarrollo. FilesMatch actua sobre el nombre
+  # del archivo, no sobre la carpeta, por eso se bloquean aqui.
+  RewriteRule ^\.vscode/ - [F,L]
 </IfModule>
 
 # ── 4. CABECERAS DE SEGURIDAD ────────────────────
@@ -64,10 +68,14 @@ DirectoryIndex index.html
 </IfModule>
 
 # ── 7. BLOQUEAR ARCHIVOS SENSIBLES ──────────────
-<FilesMatch "(\.htaccess|\.htpasswd|cpanel\.yml|\.env|optimize_assets\.py)$">
+# Los .md son documentacion interna del proyecto (Contexto.md, plan corporativo).
+# No forman parte del sitio publico y no deben ser descargables.
+<FilesMatch "(\.htaccess|\.htpasswd|cpanel\.yml|\.env|optimize_assets\.py|\.md)$">
   Order Allow,Deny
   Deny from all
 </FilesMatch>
 
 # ── 8. PÁGINA DE ERROR PERSONALIZADA ────────────
-ErrorDocument 404 /index.html
+# Debe ser una pagina propia y no /index.html: servir la portada con estado 404
+# genera "soft 404" en Google, que desperdicia presupuesto de rastreo.
+ErrorDocument 404 /404.html
