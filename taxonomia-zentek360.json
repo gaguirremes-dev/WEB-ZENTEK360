@@ -1,0 +1,3006 @@
+
+{
+  "version": "1.0",
+  "empresa": "ZENTEK360 TECHNOLOGY SOLUTIONS S.A.C.",
+  "moneda_base": "PEN",
+  "igv": 0.18,
+  "categories": [
+    {
+      "slug": "computo",
+      "nombre": "Cómputo",
+      "nivel": 1,
+      "parent": null,
+      "orden": 1
+    },
+    {
+      "slug": "laptops",
+      "nombre": "Laptops",
+      "nivel": 2,
+      "parent": "computo",
+      "orden": 1
+    },
+    {
+      "slug": "laptops-estandar",
+      "nombre": "Laptops estándar",
+      "nivel": 3,
+      "parent": "laptops",
+      "orden": 1
+    },
+    {
+      "slug": "laptops-2en1",
+      "nombre": "Laptops 2 en 1 / Convertibles",
+      "nivel": 3,
+      "parent": "laptops",
+      "orden": 2
+    },
+    {
+      "slug": "laptops-workstation",
+      "nombre": "Workstations móviles",
+      "nivel": 3,
+      "parent": "laptops",
+      "orden": 3
+    },
+    {
+      "slug": "desktops",
+      "nombre": "Computadoras de escritorio",
+      "nivel": 2,
+      "parent": "computo",
+      "orden": 2
+    },
+    {
+      "slug": "pc-escritorio",
+      "nombre": "PC de escritorio",
+      "nivel": 3,
+      "parent": "desktops",
+      "orden": 1
+    },
+    {
+      "slug": "all-in-one",
+      "nombre": "All-in-One",
+      "nivel": 3,
+      "parent": "desktops",
+      "orden": 2
+    },
+    {
+      "slug": "mini-pc",
+      "nombre": "Mini PC",
+      "nivel": 3,
+      "parent": "desktops",
+      "orden": 3
+    },
+    {
+      "slug": "workstations",
+      "nombre": "Workstations",
+      "nivel": 3,
+      "parent": "desktops",
+      "orden": 4
+    },
+    {
+      "slug": "servidores",
+      "nombre": "Servidores",
+      "nivel": 2,
+      "parent": "computo",
+      "orden": 3
+    },
+    {
+      "slug": "servidores-torre",
+      "nombre": "Servidores torre",
+      "nivel": 3,
+      "parent": "servidores",
+      "orden": 1
+    },
+    {
+      "slug": "servidores-rack",
+      "nombre": "Servidores rack",
+      "nivel": 3,
+      "parent": "servidores",
+      "orden": 2
+    },
+    {
+      "slug": "nas",
+      "nombre": "Almacenamiento en red (NAS)",
+      "nivel": 3,
+      "parent": "servidores",
+      "orden": 3
+    },
+    {
+      "slug": "tablets",
+      "nombre": "Tablets",
+      "nivel": 2,
+      "parent": "computo",
+      "orden": 4
+    },
+    {
+      "slug": "componentes",
+      "nombre": "Componentes y Partes",
+      "nivel": 1,
+      "parent": null,
+      "orden": 2
+    },
+    {
+      "slug": "procesadores",
+      "nombre": "Procesadores",
+      "nivel": 2,
+      "parent": "componentes",
+      "orden": 1
+    },
+    {
+      "slug": "placas-madre",
+      "nombre": "Placas madre",
+      "nivel": 2,
+      "parent": "componentes",
+      "orden": 2
+    },
+    {
+      "slug": "memorias-ram",
+      "nombre": "Memorias RAM",
+      "nivel": 2,
+      "parent": "componentes",
+      "orden": 3
+    },
+    {
+      "slug": "almacenamiento",
+      "nombre": "Almacenamiento",
+      "nivel": 2,
+      "parent": "componentes",
+      "orden": 4
+    },
+    {
+      "slug": "ssd-sata",
+      "nombre": "SSD SATA",
+      "nivel": 3,
+      "parent": "almacenamiento",
+      "orden": 1
+    },
+    {
+      "slug": "ssd-nvme",
+      "nombre": "SSD NVMe / M.2",
+      "nivel": 3,
+      "parent": "almacenamiento",
+      "orden": 2
+    },
+    {
+      "slug": "hdd-interno",
+      "nombre": "Discos duros internos",
+      "nivel": 3,
+      "parent": "almacenamiento",
+      "orden": 3
+    },
+    {
+      "slug": "almacenamiento-externo",
+      "nombre": "Almacenamiento externo",
+      "nivel": 3,
+      "parent": "almacenamiento",
+      "orden": 4
+    },
+    {
+      "slug": "tarjetas-graficas",
+      "nombre": "Tarjetas gráficas",
+      "nivel": 2,
+      "parent": "componentes",
+      "orden": 5
+    },
+    {
+      "slug": "fuentes-poder",
+      "nombre": "Fuentes de poder",
+      "nivel": 2,
+      "parent": "componentes",
+      "orden": 6
+    },
+    {
+      "slug": "gabinetes",
+      "nombre": "Gabinetes",
+      "nivel": 2,
+      "parent": "componentes",
+      "orden": 7
+    },
+    {
+      "slug": "refrigeracion",
+      "nombre": "Refrigeración",
+      "nivel": 2,
+      "parent": "componentes",
+      "orden": 8
+    },
+    {
+      "slug": "tarjetas-internas",
+      "nombre": "Tarjetas y adaptadores internos",
+      "nivel": 2,
+      "parent": "componentes",
+      "orden": 9
+    },
+    {
+      "slug": "perifericos",
+      "nombre": "Periféricos y Accesorios",
+      "nivel": 1,
+      "parent": null,
+      "orden": 3
+    },
+    {
+      "slug": "monitores",
+      "nombre": "Monitores",
+      "nivel": 2,
+      "parent": "perifericos",
+      "orden": 1
+    },
+    {
+      "slug": "teclados",
+      "nombre": "Teclados",
+      "nivel": 2,
+      "parent": "perifericos",
+      "orden": 2
+    },
+    {
+      "slug": "mouse",
+      "nombre": "Mouse",
+      "nivel": 2,
+      "parent": "perifericos",
+      "orden": 3
+    },
+    {
+      "slug": "combos-teclado-mouse",
+      "nombre": "Combos teclado y mouse",
+      "nivel": 2,
+      "parent": "perifericos",
+      "orden": 4
+    },
+    {
+      "slug": "audio",
+      "nombre": "Audio",
+      "nivel": 2,
+      "parent": "perifericos",
+      "orden": 5
+    },
+    {
+      "slug": "audifonos",
+      "nombre": "Audífonos",
+      "nivel": 3,
+      "parent": "audio",
+      "orden": 1
+    },
+    {
+      "slug": "parlantes",
+      "nombre": "Parlantes",
+      "nivel": 3,
+      "parent": "audio",
+      "orden": 2
+    },
+    {
+      "slug": "microfonos",
+      "nombre": "Micrófonos",
+      "nivel": 3,
+      "parent": "audio",
+      "orden": 3
+    },
+    {
+      "slug": "camaras-web",
+      "nombre": "Cámaras web",
+      "nivel": 2,
+      "parent": "perifericos",
+      "orden": 6
+    },
+    {
+      "slug": "hubs-docking",
+      "nombre": "Hubs y docking stations",
+      "nivel": 2,
+      "parent": "perifericos",
+      "orden": 7
+    },
+    {
+      "slug": "mochilas-maletines",
+      "nombre": "Mochilas y maletines",
+      "nivel": 2,
+      "parent": "perifericos",
+      "orden": 8
+    },
+    {
+      "slug": "impresion",
+      "nombre": "Impresión y Escaneo",
+      "nivel": 1,
+      "parent": null,
+      "orden": 4
+    },
+    {
+      "slug": "impresoras",
+      "nombre": "Impresoras",
+      "nivel": 2,
+      "parent": "impresion",
+      "orden": 1
+    },
+    {
+      "slug": "impresoras-tinta",
+      "nombre": "Tinta continua",
+      "nivel": 3,
+      "parent": "impresoras",
+      "orden": 1
+    },
+    {
+      "slug": "impresoras-laser",
+      "nombre": "Láser",
+      "nivel": 3,
+      "parent": "impresoras",
+      "orden": 2
+    },
+    {
+      "slug": "impresoras-matriciales",
+      "nombre": "Matriciales",
+      "nivel": 3,
+      "parent": "impresoras",
+      "orden": 3
+    },
+    {
+      "slug": "impresoras-termicas",
+      "nombre": "Térmicas / Tickets",
+      "nivel": 3,
+      "parent": "impresoras",
+      "orden": 4
+    },
+    {
+      "slug": "multifuncionales",
+      "nombre": "Multifuncionales",
+      "nivel": 2,
+      "parent": "impresion",
+      "orden": 2
+    },
+    {
+      "slug": "escaneres",
+      "nombre": "Escáneres",
+      "nivel": 2,
+      "parent": "impresion",
+      "orden": 3
+    },
+    {
+      "slug": "plotters",
+      "nombre": "Plotters",
+      "nivel": 2,
+      "parent": "impresion",
+      "orden": 4
+    },
+    {
+      "slug": "suministros-impresion",
+      "nombre": "Suministros",
+      "nivel": 2,
+      "parent": "impresion",
+      "orden": 5
+    },
+    {
+      "slug": "tintas",
+      "nombre": "Tintas",
+      "nivel": 3,
+      "parent": "suministros-impresion",
+      "orden": 1
+    },
+    {
+      "slug": "toner",
+      "nombre": "Tóner",
+      "nivel": 3,
+      "parent": "suministros-impresion",
+      "orden": 2
+    },
+    {
+      "slug": "cintas",
+      "nombre": "Cintas",
+      "nivel": 3,
+      "parent": "suministros-impresion",
+      "orden": 3
+    },
+    {
+      "slug": "cabezales",
+      "nombre": "Cabezales y repuestos",
+      "nivel": 3,
+      "parent": "suministros-impresion",
+      "orden": 4
+    },
+    {
+      "slug": "papel-consumibles",
+      "nombre": "Papel y consumibles",
+      "nivel": 2,
+      "parent": "impresion",
+      "orden": 6
+    },
+    {
+      "slug": "redes",
+      "nombre": "Redes y Conectividad",
+      "nivel": 1,
+      "parent": null,
+      "orden": 5
+    },
+    {
+      "slug": "routers",
+      "nombre": "Routers",
+      "nivel": 2,
+      "parent": "redes",
+      "orden": 1
+    },
+    {
+      "slug": "switches",
+      "nombre": "Switches",
+      "nivel": 2,
+      "parent": "redes",
+      "orden": 2
+    },
+    {
+      "slug": "access-points",
+      "nombre": "Access Points",
+      "nivel": 2,
+      "parent": "redes",
+      "orden": 3
+    },
+    {
+      "slug": "antenas-enlaces",
+      "nombre": "Antenas y enlaces",
+      "nivel": 2,
+      "parent": "redes",
+      "orden": 4
+    },
+    {
+      "slug": "adaptadores-red",
+      "nombre": "Adaptadores de red",
+      "nivel": 2,
+      "parent": "redes",
+      "orden": 5
+    },
+    {
+      "slug": "firewall",
+      "nombre": "Firewall y seguridad perimetral",
+      "nivel": 2,
+      "parent": "redes",
+      "orden": 6
+    },
+    {
+      "slug": "cableado",
+      "nombre": "Cableado Estructurado",
+      "nivel": 1,
+      "parent": null,
+      "orden": 6
+    },
+    {
+      "slug": "cable-red",
+      "nombre": "Cable de red",
+      "nivel": 2,
+      "parent": "cableado",
+      "orden": 1
+    },
+    {
+      "slug": "cable-utp",
+      "nombre": "Cable UTP",
+      "nivel": 3,
+      "parent": "cable-red",
+      "orden": 1
+    },
+    {
+      "slug": "cable-ftp-stp",
+      "nombre": "Cable FTP / STP",
+      "nivel": 3,
+      "parent": "cable-red",
+      "orden": 2
+    },
+    {
+      "slug": "fibra-optica",
+      "nombre": "Fibra óptica",
+      "nivel": 3,
+      "parent": "cable-red",
+      "orden": 3
+    },
+    {
+      "slug": "conectores",
+      "nombre": "Conectores",
+      "nivel": 2,
+      "parent": "cableado",
+      "orden": 2
+    },
+    {
+      "slug": "plugs-rj45",
+      "nombre": "Plugs RJ45",
+      "nivel": 3,
+      "parent": "conectores",
+      "orden": 1
+    },
+    {
+      "slug": "jacks-rj45",
+      "nombre": "Jacks RJ45",
+      "nivel": 3,
+      "parent": "conectores",
+      "orden": 2
+    },
+    {
+      "slug": "capuchones",
+      "nombre": "Capuchones y botas",
+      "nivel": 3,
+      "parent": "conectores",
+      "orden": 3
+    },
+    {
+      "slug": "patch-cords",
+      "nombre": "Patch cords",
+      "nivel": 2,
+      "parent": "cableado",
+      "orden": 3
+    },
+    {
+      "slug": "patch-panels",
+      "nombre": "Patch panels y organizadores",
+      "nivel": 2,
+      "parent": "cableado",
+      "orden": 4
+    },
+    {
+      "slug": "racks",
+      "nombre": "Racks y gabinetes de comunicaciones",
+      "nivel": 2,
+      "parent": "cableado",
+      "orden": 5
+    },
+    {
+      "slug": "canaletas",
+      "nombre": "Canaletas y ductos",
+      "nivel": 2,
+      "parent": "cableado",
+      "orden": 6
+    },
+    {
+      "slug": "herramientas-red",
+      "nombre": "Herramientas de red",
+      "nivel": 2,
+      "parent": "cableado",
+      "orden": 7
+    },
+    {
+      "slug": "ponchadoras",
+      "nombre": "Ponchadoras / Crimpadoras",
+      "nivel": 3,
+      "parent": "herramientas-red",
+      "orden": 1
+    },
+    {
+      "slug": "insertadoras",
+      "nombre": "Insertadoras de impacto",
+      "nivel": 3,
+      "parent": "herramientas-red",
+      "orden": 2
+    },
+    {
+      "slug": "testers-red",
+      "nombre": "Testers y certificadores",
+      "nivel": 3,
+      "parent": "herramientas-red",
+      "orden": 3
+    },
+    {
+      "slug": "peladores",
+      "nombre": "Peladores de cable",
+      "nivel": 3,
+      "parent": "herramientas-red",
+      "orden": 4
+    },
+    {
+      "slug": "seguridad",
+      "nombre": "Videovigilancia y Seguridad",
+      "nivel": 1,
+      "parent": null,
+      "orden": 7
+    },
+    {
+      "slug": "camaras-ip",
+      "nombre": "Cámaras IP",
+      "nivel": 2,
+      "parent": "seguridad",
+      "orden": 1
+    },
+    {
+      "slug": "camaras-analogicas",
+      "nombre": "Cámaras analógicas (HDCVI / TVI / AHD)",
+      "nivel": 2,
+      "parent": "seguridad",
+      "orden": 2
+    },
+    {
+      "slug": "grabadores",
+      "nombre": "Grabadores",
+      "nivel": 2,
+      "parent": "seguridad",
+      "orden": 3
+    },
+    {
+      "slug": "nvr",
+      "nombre": "NVR",
+      "nivel": 3,
+      "parent": "grabadores",
+      "orden": 1
+    },
+    {
+      "slug": "dvr",
+      "nombre": "DVR",
+      "nivel": 3,
+      "parent": "grabadores",
+      "orden": 2
+    },
+    {
+      "slug": "control-acceso",
+      "nombre": "Control de acceso y biométricos",
+      "nivel": 2,
+      "parent": "seguridad",
+      "orden": 4
+    },
+    {
+      "slug": "alarmas",
+      "nombre": "Alarmas y sensores",
+      "nivel": 2,
+      "parent": "seguridad",
+      "orden": 5
+    },
+    {
+      "slug": "accesorios-cctv",
+      "nombre": "Accesorios CCTV",
+      "nivel": 2,
+      "parent": "seguridad",
+      "orden": 6
+    },
+    {
+      "slug": "energia",
+      "nombre": "Energía y Respaldo",
+      "nivel": 1,
+      "parent": null,
+      "orden": 8
+    },
+    {
+      "slug": "ups",
+      "nombre": "UPS",
+      "nivel": 2,
+      "parent": "energia",
+      "orden": 1
+    },
+    {
+      "slug": "estabilizadores",
+      "nombre": "Estabilizadores",
+      "nivel": 2,
+      "parent": "energia",
+      "orden": 2
+    },
+    {
+      "slug": "supresores",
+      "nombre": "Supresores de pico",
+      "nivel": 2,
+      "parent": "energia",
+      "orden": 3
+    },
+    {
+      "slug": "baterias",
+      "nombre": "Baterías",
+      "nivel": 2,
+      "parent": "energia",
+      "orden": 4
+    },
+    {
+      "slug": "cables-poder",
+      "nombre": "Cables de poder",
+      "nivel": 2,
+      "parent": "energia",
+      "orden": 5
+    },
+    {
+      "slug": "electronica",
+      "nombre": "Electrónica y Herramientas",
+      "nivel": 1,
+      "parent": null,
+      "orden": 9
+    },
+    {
+      "slug": "instrumentos-medicion",
+      "nombre": "Instrumentos de medición",
+      "nivel": 2,
+      "parent": "electronica",
+      "orden": 1
+    },
+    {
+      "slug": "multimetros",
+      "nombre": "Multímetros",
+      "nivel": 3,
+      "parent": "instrumentos-medicion",
+      "orden": 1
+    },
+    {
+      "slug": "pinzas-amperimetricas",
+      "nombre": "Pinzas amperimétricas",
+      "nivel": 3,
+      "parent": "instrumentos-medicion",
+      "orden": 2
+    },
+    {
+      "slug": "soldadura",
+      "nombre": "Soldadura",
+      "nivel": 2,
+      "parent": "electronica",
+      "orden": 2
+    },
+    {
+      "slug": "cautines",
+      "nombre": "Cautines",
+      "nivel": 3,
+      "parent": "soldadura",
+      "orden": 1
+    },
+    {
+      "slug": "estaciones-soldadura",
+      "nombre": "Estaciones de soldadura",
+      "nivel": 3,
+      "parent": "soldadura",
+      "orden": 2
+    },
+    {
+      "slug": "insumos-soldadura",
+      "nombre": "Estaño, flux y mallas",
+      "nivel": 3,
+      "parent": "soldadura",
+      "orden": 3
+    },
+    {
+      "slug": "herramientas-manuales",
+      "nombre": "Herramientas manuales",
+      "nivel": 2,
+      "parent": "electronica",
+      "orden": 3
+    },
+    {
+      "slug": "componentes-electronicos",
+      "nombre": "Componentes electrónicos",
+      "nivel": 2,
+      "parent": "electronica",
+      "orden": 4
+    },
+    {
+      "slug": "placas-desarrollo",
+      "nombre": "Placas de desarrollo (Arduino, Raspberry Pi, ESP32)",
+      "nivel": 2,
+      "parent": "electronica",
+      "orden": 5
+    },
+    {
+      "slug": "fuentes-laboratorio",
+      "nombre": "Fuentes de laboratorio",
+      "nivel": 2,
+      "parent": "electronica",
+      "orden": 6
+    },
+    {
+      "slug": "software",
+      "nombre": "Software y Licencias",
+      "nivel": 1,
+      "parent": null,
+      "orden": 10
+    },
+    {
+      "slug": "sistemas-operativos",
+      "nombre": "Sistemas operativos",
+      "nivel": 2,
+      "parent": "software",
+      "orden": 1
+    },
+    {
+      "slug": "ofimatica",
+      "nombre": "Ofimática",
+      "nivel": 2,
+      "parent": "software",
+      "orden": 2
+    },
+    {
+      "slug": "antivirus",
+      "nombre": "Antivirus y seguridad",
+      "nivel": 2,
+      "parent": "software",
+      "orden": 3
+    },
+    {
+      "slug": "licencias-servidor",
+      "nombre": "Licencias de servidor",
+      "nivel": 2,
+      "parent": "software",
+      "orden": 4
+    },
+    {
+      "slug": "servicios",
+      "nombre": "Servicios ZENTEK360",
+      "nivel": 1,
+      "parent": null,
+      "orden": 11
+    },
+    {
+      "slug": "hosting",
+      "nombre": "Hosting cPanel",
+      "nivel": 2,
+      "parent": "servicios",
+      "orden": 1
+    },
+    {
+      "slug": "dominios",
+      "nombre": "Dominios",
+      "nivel": 2,
+      "parent": "servicios",
+      "orden": 2
+    },
+    {
+      "slug": "desarrollo-web",
+      "nombre": "Desarrollo web",
+      "nivel": 2,
+      "parent": "servicios",
+      "orden": 3
+    },
+    {
+      "slug": "automatizacion",
+      "nombre": "Automatización n8n",
+      "nivel": 2,
+      "parent": "servicios",
+      "orden": 4
+    },
+    {
+      "slug": "agentes-ia",
+      "nombre": "Agentes de IA",
+      "nivel": 2,
+      "parent": "servicios",
+      "orden": 5
+    },
+    {
+      "slug": "soporte",
+      "nombre": "Soporte y mantenimiento",
+      "nivel": 2,
+      "parent": "servicios",
+      "orden": 6
+    }
+  ],
+  "brands": [
+    {
+      "slug": "hp",
+      "nombre": "HP"
+    },
+    {
+      "slug": "dell",
+      "nombre": "Dell"
+    },
+    {
+      "slug": "lenovo",
+      "nombre": "Lenovo"
+    },
+    {
+      "slug": "asus",
+      "nombre": "ASUS"
+    },
+    {
+      "slug": "acer",
+      "nombre": "Acer"
+    },
+    {
+      "slug": "apple",
+      "nombre": "Apple"
+    },
+    {
+      "slug": "epson",
+      "nombre": "Epson"
+    },
+    {
+      "slug": "canon",
+      "nombre": "Canon"
+    },
+    {
+      "slug": "brother",
+      "nombre": "Brother"
+    },
+    {
+      "slug": "dahua",
+      "nombre": "Dahua"
+    },
+    {
+      "slug": "hikvision",
+      "nombre": "Hikvision"
+    },
+    {
+      "slug": "tp-link",
+      "nombre": "TP-Link"
+    },
+    {
+      "slug": "ubiquiti",
+      "nombre": "Ubiquiti"
+    },
+    {
+      "slug": "mikrotik",
+      "nombre": "MikroTik"
+    },
+    {
+      "slug": "cisco",
+      "nombre": "Cisco"
+    },
+    {
+      "slug": "satra",
+      "nombre": "Satra"
+    },
+    {
+      "slug": "panduit",
+      "nombre": "Panduit"
+    },
+    {
+      "slug": "apc",
+      "nombre": "APC"
+    },
+    {
+      "slug": "forza",
+      "nombre": "Forza"
+    },
+    {
+      "slug": "kingston",
+      "nombre": "Kingston"
+    },
+    {
+      "slug": "western-digital",
+      "nombre": "Western Digital"
+    },
+    {
+      "slug": "seagate",
+      "nombre": "Seagate"
+    },
+    {
+      "slug": "logitech",
+      "nombre": "Logitech"
+    },
+    {
+      "slug": "generico",
+      "nombre": "Genérico"
+    }
+  ],
+  "attributes": [
+    {
+      "codigo": "procesador_marca",
+      "nombre": "Marca de procesador",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "Intel",
+        "AMD",
+        "Apple",
+        "Qualcomm"
+      ]
+    },
+    {
+      "codigo": "procesador_modelo",
+      "nombre": "Modelo de procesador",
+      "tipo": "texto",
+      "unidad": null,
+      "es_filtrable": false,
+      "es_comparable": true
+    },
+    {
+      "codigo": "ram_gb",
+      "nombre": "Memoria RAM",
+      "tipo": "numero",
+      "unidad": "GB",
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "ram_tipo",
+      "nombre": "Tipo de RAM",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "DDR4",
+        "DDR5",
+        "LPDDR4X",
+        "LPDDR5"
+      ]
+    },
+    {
+      "codigo": "almacenamiento_gb",
+      "nombre": "Almacenamiento",
+      "tipo": "numero",
+      "unidad": "GB",
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "almacenamiento_tipo",
+      "nombre": "Tipo de almacenamiento",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "SSD NVMe",
+        "SSD SATA",
+        "HDD",
+        "eMMC"
+      ]
+    },
+    {
+      "codigo": "pantalla_pulgadas",
+      "nombre": "Tamaño de pantalla",
+      "tipo": "numero",
+      "unidad": "pulg",
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "resolucion",
+      "nombre": "Resolución",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "HD",
+        "Full HD",
+        "2K / QHD",
+        "4K / UHD"
+      ]
+    },
+    {
+      "codigo": "grafica",
+      "nombre": "Tarjeta gráfica",
+      "tipo": "texto",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "sistema_operativo",
+      "nombre": "Sistema operativo",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "Windows 11 Home",
+        "Windows 11 Pro",
+        "FreeDOS",
+        "Sin sistema operativo",
+        "macOS",
+        "Linux"
+      ]
+    },
+    {
+      "codigo": "peso_kg",
+      "nombre": "Peso",
+      "tipo": "numero",
+      "unidad": "kg",
+      "es_filtrable": false,
+      "es_comparable": true
+    },
+    {
+      "codigo": "tasa_refresco_hz",
+      "nombre": "Tasa de refresco",
+      "tipo": "numero",
+      "unidad": "Hz",
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "panel_tipo",
+      "nombre": "Tipo de panel",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "IPS",
+        "VA",
+        "TN",
+        "OLED"
+      ]
+    },
+    {
+      "codigo": "puertos_video",
+      "nombre": "Puertos de video",
+      "tipo": "multi_seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "HDMI",
+        "DisplayPort",
+        "VGA",
+        "USB-C",
+        "DVI"
+      ]
+    },
+    {
+      "codigo": "altavoces_integrados",
+      "nombre": "Altavoces integrados",
+      "tipo": "booleano",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "tecnologia_impresion",
+      "nombre": "Tecnología de impresión",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "Tinta continua",
+        "Cartucho de tinta",
+        "Láser",
+        "Matricial",
+        "Térmica"
+      ]
+    },
+    {
+      "codigo": "color",
+      "nombre": "Impresión a color",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "Color",
+        "Monocromo"
+      ]
+    },
+    {
+      "codigo": "funciones",
+      "nombre": "Funciones",
+      "tipo": "multi_seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "Imprime",
+        "Copia",
+        "Escanea",
+        "Fax"
+      ]
+    },
+    {
+      "codigo": "velocidad_ppm",
+      "nombre": "Velocidad de impresión",
+      "tipo": "numero",
+      "unidad": "ppm",
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "formato_maximo",
+      "nombre": "Formato máximo",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "A4",
+        "A3",
+        "A2",
+        "A1",
+        "A0"
+      ]
+    },
+    {
+      "codigo": "conectividad",
+      "nombre": "Conectividad",
+      "tipo": "multi_seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "USB",
+        "Ethernet",
+        "Wi-Fi",
+        "Bluetooth",
+        "NFC"
+      ]
+    },
+    {
+      "codigo": "duplex",
+      "nombre": "Impresión dúplex",
+      "tipo": "booleano",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "ciclo_mensual",
+      "nombre": "Ciclo de trabajo mensual",
+      "tipo": "numero",
+      "unidad": "páginas",
+      "es_filtrable": false,
+      "es_comparable": true
+    },
+    {
+      "codigo": "categoria_cable",
+      "nombre": "Categoría de cable",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "Cat5e",
+        "Cat6",
+        "Cat6A",
+        "Cat7",
+        "Cat8"
+      ]
+    },
+    {
+      "codigo": "blindaje",
+      "nombre": "Blindaje",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "UTP",
+        "FTP",
+        "STP",
+        "SFTP"
+      ]
+    },
+    {
+      "codigo": "material_conductor",
+      "nombre": "Material del conductor",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "Cobre puro",
+        "CCA (aluminio recubierto)"
+      ]
+    },
+    {
+      "codigo": "uso",
+      "nombre": "Uso",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "Interior",
+        "Exterior",
+        "Directo a tierra",
+        "Plenum"
+      ]
+    },
+    {
+      "codigo": "longitud_m",
+      "nombre": "Longitud",
+      "tipo": "numero",
+      "unidad": "m",
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "color_producto",
+      "nombre": "Color",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": false,
+      "opciones": [
+        "Negro",
+        "Blanco",
+        "Gris",
+        "Azul",
+        "Rojo",
+        "Amarillo",
+        "Verde",
+        "Naranja"
+      ]
+    },
+    {
+      "codigo": "awg",
+      "nombre": "Calibre AWG",
+      "tipo": "numero",
+      "unidad": "AWG",
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "certificacion",
+      "nombre": "Certificación",
+      "tipo": "texto",
+      "unidad": null,
+      "es_filtrable": false,
+      "es_comparable": true
+    },
+    {
+      "codigo": "presentacion",
+      "nombre": "Presentación",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "Unidad",
+        "Bolsa 50",
+        "Bolsa 100",
+        "Caja 305 m",
+        "Caja 100 m",
+        "Rollo"
+      ]
+    },
+    {
+      "codigo": "chapado",
+      "nombre": "Chapado de contactos",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "Oro 50u",
+        "Oro 30u",
+        "Oro 15u",
+        "Níquel"
+      ]
+    },
+    {
+      "codigo": "bota",
+      "nombre": "Con bota protectora",
+      "tipo": "booleano",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "puertos_cantidad",
+      "nombre": "Cantidad de puertos",
+      "tipo": "numero",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "puertos_velocidad",
+      "nombre": "Velocidad de puertos",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "10/100",
+        "Gigabit",
+        "2.5G",
+        "10G"
+      ]
+    },
+    {
+      "codigo": "poe",
+      "nombre": "PoE",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "No",
+        "PoE",
+        "PoE+",
+        "PoE++"
+      ]
+    },
+    {
+      "codigo": "presupuesto_poe_w",
+      "nombre": "Presupuesto PoE",
+      "tipo": "numero",
+      "unidad": "W",
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "administrable",
+      "nombre": "Administrable",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "No administrable",
+        "Smart",
+        "Administrable L2",
+        "Administrable L3"
+      ]
+    },
+    {
+      "codigo": "puertos_sfp",
+      "nombre": "Puertos SFP",
+      "tipo": "numero",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "rackeable",
+      "nombre": "Rackeable",
+      "tipo": "booleano",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "wifi_estandar",
+      "nombre": "Estándar Wi-Fi",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "Wi-Fi 4",
+        "Wi-Fi 5",
+        "Wi-Fi 6",
+        "Wi-Fi 6E",
+        "Wi-Fi 7"
+      ]
+    },
+    {
+      "codigo": "bandas",
+      "nombre": "Bandas",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "Banda simple",
+        "Doble banda",
+        "Triple banda"
+      ]
+    },
+    {
+      "codigo": "velocidad_mbps",
+      "nombre": "Velocidad inalámbrica",
+      "tipo": "numero",
+      "unidad": "Mbps",
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "puertos_lan",
+      "nombre": "Puertos LAN",
+      "tipo": "numero",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "poe_alimentacion",
+      "nombre": "Se alimenta por PoE",
+      "tipo": "booleano",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "montaje",
+      "nombre": "Montaje",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "Techo",
+        "Pared",
+        "Escritorio",
+        "Rack",
+        "Poste",
+        "Exterior"
+      ]
+    },
+    {
+      "codigo": "resolucion_mp",
+      "nombre": "Resolución",
+      "tipo": "numero",
+      "unidad": "MP",
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "tecnologia_camara",
+      "nombre": "Tecnología",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "IP",
+        "HDCVI",
+        "TVI",
+        "AHD",
+        "Analógica"
+      ]
+    },
+    {
+      "codigo": "formato_camara",
+      "nombre": "Formato",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "Bullet",
+        "Domo",
+        "PTZ",
+        "Ojo de pez",
+        "Cubo",
+        "Oculta"
+      ]
+    },
+    {
+      "codigo": "lente_mm",
+      "nombre": "Lente",
+      "tipo": "numero",
+      "unidad": "mm",
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "vision_nocturna_m",
+      "nombre": "Visión nocturna",
+      "tipo": "numero",
+      "unidad": "m",
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "grado_ip",
+      "nombre": "Grado de protección",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "IP66",
+        "IP67",
+        "IK10",
+        "Sin certificación"
+      ]
+    },
+    {
+      "codigo": "audio",
+      "nombre": "Audio integrado",
+      "tipo": "booleano",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "ranura_sd",
+      "nombre": "Ranura microSD",
+      "tipo": "booleano",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "canales",
+      "nombre": "Canales",
+      "tipo": "numero",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "bahias_disco",
+      "nombre": "Bahías de disco",
+      "tipo": "numero",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "capacidad_max_tb",
+      "nombre": "Capacidad máxima",
+      "tipo": "numero",
+      "unidad": "TB",
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "resolucion_max",
+      "nombre": "Resolución máxima de grabación",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "1080p",
+        "4MP",
+        "5MP",
+        "4K / 8MP",
+        "12MP"
+      ]
+    },
+    {
+      "codigo": "puertos_poe",
+      "nombre": "Puertos PoE",
+      "tipo": "numero",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "salidas_video",
+      "nombre": "Salidas de video",
+      "tipo": "multi_seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "HDMI",
+        "VGA",
+        "BNC"
+      ]
+    },
+    {
+      "codigo": "capacidad_va",
+      "nombre": "Capacidad",
+      "tipo": "numero",
+      "unidad": "VA",
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "potencia_w",
+      "nombre": "Potencia",
+      "tipo": "numero",
+      "unidad": "W",
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "topologia",
+      "nombre": "Topología",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "Offline / Standby",
+        "Línea interactiva",
+        "Online doble conversión"
+      ]
+    },
+    {
+      "codigo": "tomas_cantidad",
+      "nombre": "Cantidad de tomas",
+      "tipo": "numero",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "tipo_toma",
+      "nombre": "Tipo de toma",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "Universal",
+        "NEMA 5-15",
+        "IEC C13",
+        "Schuko"
+      ]
+    },
+    {
+      "codigo": "autonomia_min",
+      "nombre": "Autonomía",
+      "tipo": "numero",
+      "unidad": "min",
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "tipo_herramienta",
+      "nombre": "Tipo de herramienta",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "Ponchadora",
+        "Insertadora",
+        "Tester",
+        "Certificador",
+        "Pelador",
+        "Kit"
+      ]
+    },
+    {
+      "codigo": "compatibilidad",
+      "nombre": "Compatibilidad",
+      "tipo": "multi_seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "RJ45",
+        "RJ11",
+        "RJ12",
+        "Coaxial",
+        "Fibra"
+      ]
+    },
+    {
+      "codigo": "trinquete",
+      "nombre": "Con trinquete",
+      "tipo": "booleano",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "material",
+      "nombre": "Material",
+      "tipo": "texto",
+      "unidad": null,
+      "es_filtrable": false,
+      "es_comparable": true
+    },
+    {
+      "codigo": "compatibilidad_modelos",
+      "nombre": "Modelos compatibles",
+      "tipo": "texto",
+      "unidad": null,
+      "es_filtrable": false,
+      "es_comparable": true
+    },
+    {
+      "codigo": "color_cartucho",
+      "nombre": "Color del suministro",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "Negro",
+        "Cian",
+        "Magenta",
+        "Amarillo",
+        "Tricolor",
+        "Foto"
+      ]
+    },
+    {
+      "codigo": "rendimiento_paginas",
+      "nombre": "Rendimiento",
+      "tipo": "numero",
+      "unidad": "páginas",
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "contenido_ml",
+      "nombre": "Contenido",
+      "tipo": "numero",
+      "unidad": "ml",
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "tipo_suministro",
+      "nombre": "Tipo de suministro",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "Original",
+        "Compatible",
+        "Remanufacturado"
+      ]
+    },
+    {
+      "codigo": "periodicidad",
+      "nombre": "Periodicidad",
+      "tipo": "seleccion",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true,
+      "opciones": [
+        "Pago único",
+        "Mensual",
+        "Anual"
+      ]
+    },
+    {
+      "codigo": "cuentas_correo",
+      "nombre": "Cuentas de correo",
+      "tipo": "numero",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "dominios_incluidos",
+      "nombre": "Dominios incluidos",
+      "tipo": "numero",
+      "unidad": null,
+      "es_filtrable": true,
+      "es_comparable": true
+    },
+    {
+      "codigo": "soporte_incluido",
+      "nombre": "Soporte incluido",
+      "tipo": "texto",
+      "unidad": null,
+      "es_filtrable": false,
+      "es_comparable": true
+    }
+  ],
+  "category_attributes": [
+    {
+      "category_slug": "laptops",
+      "attribute_codigo": "procesador_marca",
+      "requerido": true,
+      "orden": 1
+    },
+    {
+      "category_slug": "laptops",
+      "attribute_codigo": "procesador_modelo",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "laptops",
+      "attribute_codigo": "ram_gb",
+      "requerido": true,
+      "orden": 3
+    },
+    {
+      "category_slug": "laptops",
+      "attribute_codigo": "ram_tipo",
+      "requerido": false,
+      "orden": 4
+    },
+    {
+      "category_slug": "laptops",
+      "attribute_codigo": "almacenamiento_gb",
+      "requerido": true,
+      "orden": 5
+    },
+    {
+      "category_slug": "laptops",
+      "attribute_codigo": "almacenamiento_tipo",
+      "requerido": false,
+      "orden": 6
+    },
+    {
+      "category_slug": "laptops",
+      "attribute_codigo": "sistema_operativo",
+      "requerido": false,
+      "orden": 7
+    },
+    {
+      "category_slug": "laptops",
+      "attribute_codigo": "grafica",
+      "requerido": false,
+      "orden": 8
+    },
+    {
+      "category_slug": "laptops",
+      "attribute_codigo": "pantalla_pulgadas",
+      "requerido": false,
+      "orden": 9
+    },
+    {
+      "category_slug": "laptops",
+      "attribute_codigo": "resolucion",
+      "requerido": false,
+      "orden": 10
+    },
+    {
+      "category_slug": "laptops",
+      "attribute_codigo": "peso_kg",
+      "requerido": false,
+      "orden": 11
+    },
+    {
+      "category_slug": "desktops",
+      "attribute_codigo": "procesador_marca",
+      "requerido": false,
+      "orden": 1
+    },
+    {
+      "category_slug": "desktops",
+      "attribute_codigo": "procesador_modelo",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "desktops",
+      "attribute_codigo": "ram_gb",
+      "requerido": false,
+      "orden": 3
+    },
+    {
+      "category_slug": "desktops",
+      "attribute_codigo": "ram_tipo",
+      "requerido": false,
+      "orden": 4
+    },
+    {
+      "category_slug": "desktops",
+      "attribute_codigo": "almacenamiento_gb",
+      "requerido": false,
+      "orden": 5
+    },
+    {
+      "category_slug": "desktops",
+      "attribute_codigo": "almacenamiento_tipo",
+      "requerido": false,
+      "orden": 6
+    },
+    {
+      "category_slug": "desktops",
+      "attribute_codigo": "sistema_operativo",
+      "requerido": false,
+      "orden": 7
+    },
+    {
+      "category_slug": "desktops",
+      "attribute_codigo": "grafica",
+      "requerido": false,
+      "orden": 8
+    },
+    {
+      "category_slug": "servidores",
+      "attribute_codigo": "procesador_marca",
+      "requerido": false,
+      "orden": 1
+    },
+    {
+      "category_slug": "servidores",
+      "attribute_codigo": "procesador_modelo",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "servidores",
+      "attribute_codigo": "ram_gb",
+      "requerido": false,
+      "orden": 3
+    },
+    {
+      "category_slug": "servidores",
+      "attribute_codigo": "ram_tipo",
+      "requerido": false,
+      "orden": 4
+    },
+    {
+      "category_slug": "servidores",
+      "attribute_codigo": "almacenamiento_gb",
+      "requerido": false,
+      "orden": 5
+    },
+    {
+      "category_slug": "servidores",
+      "attribute_codigo": "almacenamiento_tipo",
+      "requerido": false,
+      "orden": 6
+    },
+    {
+      "category_slug": "servidores",
+      "attribute_codigo": "sistema_operativo",
+      "requerido": false,
+      "orden": 7
+    },
+    {
+      "category_slug": "servidores",
+      "attribute_codigo": "grafica",
+      "requerido": false,
+      "orden": 8
+    },
+    {
+      "category_slug": "servidores",
+      "attribute_codigo": "rackeable",
+      "requerido": false,
+      "orden": 9
+    },
+    {
+      "category_slug": "tablets",
+      "attribute_codigo": "pantalla_pulgadas",
+      "requerido": false,
+      "orden": 1
+    },
+    {
+      "category_slug": "tablets",
+      "attribute_codigo": "resolucion",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "tablets",
+      "attribute_codigo": "almacenamiento_gb",
+      "requerido": false,
+      "orden": 3
+    },
+    {
+      "category_slug": "tablets",
+      "attribute_codigo": "ram_gb",
+      "requerido": false,
+      "orden": 4
+    },
+    {
+      "category_slug": "tablets",
+      "attribute_codigo": "sistema_operativo",
+      "requerido": false,
+      "orden": 5
+    },
+    {
+      "category_slug": "tablets",
+      "attribute_codigo": "peso_kg",
+      "requerido": false,
+      "orden": 6
+    },
+    {
+      "category_slug": "memorias-ram",
+      "attribute_codigo": "ram_gb",
+      "requerido": false,
+      "orden": 1
+    },
+    {
+      "category_slug": "memorias-ram",
+      "attribute_codigo": "ram_tipo",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "memorias-ram",
+      "attribute_codigo": "velocidad_mbps",
+      "requerido": false,
+      "orden": 3
+    },
+    {
+      "category_slug": "almacenamiento",
+      "attribute_codigo": "almacenamiento_gb",
+      "requerido": false,
+      "orden": 1
+    },
+    {
+      "category_slug": "almacenamiento",
+      "attribute_codigo": "almacenamiento_tipo",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "monitores",
+      "attribute_codigo": "pantalla_pulgadas",
+      "requerido": false,
+      "orden": 1
+    },
+    {
+      "category_slug": "monitores",
+      "attribute_codigo": "resolucion",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "monitores",
+      "attribute_codigo": "tasa_refresco_hz",
+      "requerido": false,
+      "orden": 3
+    },
+    {
+      "category_slug": "monitores",
+      "attribute_codigo": "panel_tipo",
+      "requerido": false,
+      "orden": 4
+    },
+    {
+      "category_slug": "monitores",
+      "attribute_codigo": "puertos_video",
+      "requerido": false,
+      "orden": 5
+    },
+    {
+      "category_slug": "monitores",
+      "attribute_codigo": "altavoces_integrados",
+      "requerido": false,
+      "orden": 6
+    },
+    {
+      "category_slug": "impresoras",
+      "attribute_codigo": "tecnologia_impresion",
+      "requerido": false,
+      "orden": 1
+    },
+    {
+      "category_slug": "impresoras",
+      "attribute_codigo": "color",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "impresoras",
+      "attribute_codigo": "velocidad_ppm",
+      "requerido": false,
+      "orden": 3
+    },
+    {
+      "category_slug": "impresoras",
+      "attribute_codigo": "formato_maximo",
+      "requerido": false,
+      "orden": 4
+    },
+    {
+      "category_slug": "impresoras",
+      "attribute_codigo": "conectividad",
+      "requerido": false,
+      "orden": 5
+    },
+    {
+      "category_slug": "impresoras",
+      "attribute_codigo": "duplex",
+      "requerido": false,
+      "orden": 6
+    },
+    {
+      "category_slug": "impresoras",
+      "attribute_codigo": "ciclo_mensual",
+      "requerido": false,
+      "orden": 7
+    },
+    {
+      "category_slug": "multifuncionales",
+      "attribute_codigo": "tecnologia_impresion",
+      "requerido": false,
+      "orden": 1
+    },
+    {
+      "category_slug": "multifuncionales",
+      "attribute_codigo": "color",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "multifuncionales",
+      "attribute_codigo": "funciones",
+      "requerido": false,
+      "orden": 3
+    },
+    {
+      "category_slug": "multifuncionales",
+      "attribute_codigo": "velocidad_ppm",
+      "requerido": false,
+      "orden": 4
+    },
+    {
+      "category_slug": "multifuncionales",
+      "attribute_codigo": "formato_maximo",
+      "requerido": false,
+      "orden": 5
+    },
+    {
+      "category_slug": "multifuncionales",
+      "attribute_codigo": "conectividad",
+      "requerido": false,
+      "orden": 6
+    },
+    {
+      "category_slug": "multifuncionales",
+      "attribute_codigo": "duplex",
+      "requerido": false,
+      "orden": 7
+    },
+    {
+      "category_slug": "multifuncionales",
+      "attribute_codigo": "ciclo_mensual",
+      "requerido": false,
+      "orden": 8
+    },
+    {
+      "category_slug": "escaneres",
+      "attribute_codigo": "formato_maximo",
+      "requerido": false,
+      "orden": 1
+    },
+    {
+      "category_slug": "escaneres",
+      "attribute_codigo": "conectividad",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "escaneres",
+      "attribute_codigo": "velocidad_ppm",
+      "requerido": false,
+      "orden": 3
+    },
+    {
+      "category_slug": "escaneres",
+      "attribute_codigo": "duplex",
+      "requerido": false,
+      "orden": 4
+    },
+    {
+      "category_slug": "plotters",
+      "attribute_codigo": "tecnologia_impresion",
+      "requerido": false,
+      "orden": 1
+    },
+    {
+      "category_slug": "plotters",
+      "attribute_codigo": "color",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "plotters",
+      "attribute_codigo": "formato_maximo",
+      "requerido": false,
+      "orden": 3
+    },
+    {
+      "category_slug": "plotters",
+      "attribute_codigo": "conectividad",
+      "requerido": false,
+      "orden": 4
+    },
+    {
+      "category_slug": "suministros-impresion",
+      "attribute_codigo": "compatibilidad_modelos",
+      "requerido": false,
+      "orden": 1
+    },
+    {
+      "category_slug": "suministros-impresion",
+      "attribute_codigo": "color_cartucho",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "suministros-impresion",
+      "attribute_codigo": "rendimiento_paginas",
+      "requerido": false,
+      "orden": 3
+    },
+    {
+      "category_slug": "suministros-impresion",
+      "attribute_codigo": "contenido_ml",
+      "requerido": false,
+      "orden": 4
+    },
+    {
+      "category_slug": "suministros-impresion",
+      "attribute_codigo": "tipo_suministro",
+      "requerido": false,
+      "orden": 5
+    },
+    {
+      "category_slug": "cable-red",
+      "attribute_codigo": "categoria_cable",
+      "requerido": true,
+      "orden": 1
+    },
+    {
+      "category_slug": "cable-red",
+      "attribute_codigo": "blindaje",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "cable-red",
+      "attribute_codigo": "material_conductor",
+      "requerido": true,
+      "orden": 3
+    },
+    {
+      "category_slug": "cable-red",
+      "attribute_codigo": "uso",
+      "requerido": false,
+      "orden": 4
+    },
+    {
+      "category_slug": "cable-red",
+      "attribute_codigo": "longitud_m",
+      "requerido": false,
+      "orden": 5
+    },
+    {
+      "category_slug": "cable-red",
+      "attribute_codigo": "color_producto",
+      "requerido": false,
+      "orden": 6
+    },
+    {
+      "category_slug": "cable-red",
+      "attribute_codigo": "awg",
+      "requerido": false,
+      "orden": 7
+    },
+    {
+      "category_slug": "cable-red",
+      "attribute_codigo": "certificacion",
+      "requerido": false,
+      "orden": 8
+    },
+    {
+      "category_slug": "cable-red",
+      "attribute_codigo": "presentacion",
+      "requerido": true,
+      "orden": 9
+    },
+    {
+      "category_slug": "conectores",
+      "attribute_codigo": "categoria_cable",
+      "requerido": true,
+      "orden": 1
+    },
+    {
+      "category_slug": "conectores",
+      "attribute_codigo": "blindaje",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "conectores",
+      "attribute_codigo": "presentacion",
+      "requerido": true,
+      "orden": 3
+    },
+    {
+      "category_slug": "conectores",
+      "attribute_codigo": "chapado",
+      "requerido": false,
+      "orden": 4
+    },
+    {
+      "category_slug": "patch-cords",
+      "attribute_codigo": "categoria_cable",
+      "requerido": false,
+      "orden": 1
+    },
+    {
+      "category_slug": "patch-cords",
+      "attribute_codigo": "blindaje",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "patch-cords",
+      "attribute_codigo": "longitud_m",
+      "requerido": false,
+      "orden": 3
+    },
+    {
+      "category_slug": "patch-cords",
+      "attribute_codigo": "color_producto",
+      "requerido": false,
+      "orden": 4
+    },
+    {
+      "category_slug": "patch-cords",
+      "attribute_codigo": "bota",
+      "requerido": false,
+      "orden": 5
+    },
+    {
+      "category_slug": "patch-panels",
+      "attribute_codigo": "puertos_cantidad",
+      "requerido": false,
+      "orden": 1
+    },
+    {
+      "category_slug": "patch-panels",
+      "attribute_codigo": "categoria_cable",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "patch-panels",
+      "attribute_codigo": "rackeable",
+      "requerido": false,
+      "orden": 3
+    },
+    {
+      "category_slug": "racks",
+      "attribute_codigo": "montaje",
+      "requerido": false,
+      "orden": 1
+    },
+    {
+      "category_slug": "racks",
+      "attribute_codigo": "material",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "herramientas-red",
+      "attribute_codigo": "tipo_herramienta",
+      "requerido": false,
+      "orden": 1
+    },
+    {
+      "category_slug": "herramientas-red",
+      "attribute_codigo": "compatibilidad",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "herramientas-red",
+      "attribute_codigo": "trinquete",
+      "requerido": false,
+      "orden": 3
+    },
+    {
+      "category_slug": "herramientas-red",
+      "attribute_codigo": "material",
+      "requerido": false,
+      "orden": 4
+    },
+    {
+      "category_slug": "switches",
+      "attribute_codigo": "puertos_cantidad",
+      "requerido": true,
+      "orden": 1
+    },
+    {
+      "category_slug": "switches",
+      "attribute_codigo": "puertos_velocidad",
+      "requerido": true,
+      "orden": 2
+    },
+    {
+      "category_slug": "switches",
+      "attribute_codigo": "poe",
+      "requerido": false,
+      "orden": 3
+    },
+    {
+      "category_slug": "switches",
+      "attribute_codigo": "presupuesto_poe_w",
+      "requerido": false,
+      "orden": 4
+    },
+    {
+      "category_slug": "switches",
+      "attribute_codigo": "administrable",
+      "requerido": false,
+      "orden": 5
+    },
+    {
+      "category_slug": "switches",
+      "attribute_codigo": "puertos_sfp",
+      "requerido": false,
+      "orden": 6
+    },
+    {
+      "category_slug": "switches",
+      "attribute_codigo": "rackeable",
+      "requerido": false,
+      "orden": 7
+    },
+    {
+      "category_slug": "routers",
+      "attribute_codigo": "wifi_estandar",
+      "requerido": false,
+      "orden": 1
+    },
+    {
+      "category_slug": "routers",
+      "attribute_codigo": "bandas",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "routers",
+      "attribute_codigo": "velocidad_mbps",
+      "requerido": false,
+      "orden": 3
+    },
+    {
+      "category_slug": "routers",
+      "attribute_codigo": "puertos_lan",
+      "requerido": false,
+      "orden": 4
+    },
+    {
+      "category_slug": "routers",
+      "attribute_codigo": "rackeable",
+      "requerido": false,
+      "orden": 5
+    },
+    {
+      "category_slug": "access-points",
+      "attribute_codigo": "wifi_estandar",
+      "requerido": false,
+      "orden": 1
+    },
+    {
+      "category_slug": "access-points",
+      "attribute_codigo": "bandas",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "access-points",
+      "attribute_codigo": "velocidad_mbps",
+      "requerido": false,
+      "orden": 3
+    },
+    {
+      "category_slug": "access-points",
+      "attribute_codigo": "poe_alimentacion",
+      "requerido": false,
+      "orden": 4
+    },
+    {
+      "category_slug": "access-points",
+      "attribute_codigo": "montaje",
+      "requerido": false,
+      "orden": 5
+    },
+    {
+      "category_slug": "access-points",
+      "attribute_codigo": "grado_ip",
+      "requerido": false,
+      "orden": 6
+    },
+    {
+      "category_slug": "antenas-enlaces",
+      "attribute_codigo": "velocidad_mbps",
+      "requerido": false,
+      "orden": 1
+    },
+    {
+      "category_slug": "antenas-enlaces",
+      "attribute_codigo": "grado_ip",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "antenas-enlaces",
+      "attribute_codigo": "montaje",
+      "requerido": false,
+      "orden": 3
+    },
+    {
+      "category_slug": "antenas-enlaces",
+      "attribute_codigo": "poe_alimentacion",
+      "requerido": false,
+      "orden": 4
+    },
+    {
+      "category_slug": "camaras-ip",
+      "attribute_codigo": "resolucion_mp",
+      "requerido": true,
+      "orden": 1
+    },
+    {
+      "category_slug": "camaras-ip",
+      "attribute_codigo": "formato_camara",
+      "requerido": true,
+      "orden": 2
+    },
+    {
+      "category_slug": "camaras-ip",
+      "attribute_codigo": "lente_mm",
+      "requerido": false,
+      "orden": 3
+    },
+    {
+      "category_slug": "camaras-ip",
+      "attribute_codigo": "vision_nocturna_m",
+      "requerido": false,
+      "orden": 4
+    },
+    {
+      "category_slug": "camaras-ip",
+      "attribute_codigo": "grado_ip",
+      "requerido": false,
+      "orden": 5
+    },
+    {
+      "category_slug": "camaras-ip",
+      "attribute_codigo": "poe_alimentacion",
+      "requerido": false,
+      "orden": 6
+    },
+    {
+      "category_slug": "camaras-ip",
+      "attribute_codigo": "audio",
+      "requerido": false,
+      "orden": 7
+    },
+    {
+      "category_slug": "camaras-ip",
+      "attribute_codigo": "ranura_sd",
+      "requerido": false,
+      "orden": 8
+    },
+    {
+      "category_slug": "camaras-analogicas",
+      "attribute_codigo": "resolucion_mp",
+      "requerido": false,
+      "orden": 1
+    },
+    {
+      "category_slug": "camaras-analogicas",
+      "attribute_codigo": "tecnologia_camara",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "camaras-analogicas",
+      "attribute_codigo": "formato_camara",
+      "requerido": false,
+      "orden": 3
+    },
+    {
+      "category_slug": "camaras-analogicas",
+      "attribute_codigo": "lente_mm",
+      "requerido": false,
+      "orden": 4
+    },
+    {
+      "category_slug": "camaras-analogicas",
+      "attribute_codigo": "vision_nocturna_m",
+      "requerido": false,
+      "orden": 5
+    },
+    {
+      "category_slug": "camaras-analogicas",
+      "attribute_codigo": "grado_ip",
+      "requerido": false,
+      "orden": 6
+    },
+    {
+      "category_slug": "camaras-analogicas",
+      "attribute_codigo": "audio",
+      "requerido": false,
+      "orden": 7
+    },
+    {
+      "category_slug": "grabadores",
+      "attribute_codigo": "canales",
+      "requerido": false,
+      "orden": 1
+    },
+    {
+      "category_slug": "grabadores",
+      "attribute_codigo": "bahias_disco",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "grabadores",
+      "attribute_codigo": "capacidad_max_tb",
+      "requerido": false,
+      "orden": 3
+    },
+    {
+      "category_slug": "grabadores",
+      "attribute_codigo": "resolucion_max",
+      "requerido": false,
+      "orden": 4
+    },
+    {
+      "category_slug": "grabadores",
+      "attribute_codigo": "puertos_poe",
+      "requerido": false,
+      "orden": 5
+    },
+    {
+      "category_slug": "grabadores",
+      "attribute_codigo": "salidas_video",
+      "requerido": false,
+      "orden": 6
+    },
+    {
+      "category_slug": "grabadores",
+      "attribute_codigo": "rackeable",
+      "requerido": false,
+      "orden": 7
+    },
+    {
+      "category_slug": "ups",
+      "attribute_codigo": "capacidad_va",
+      "requerido": true,
+      "orden": 1
+    },
+    {
+      "category_slug": "ups",
+      "attribute_codigo": "potencia_w",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "ups",
+      "attribute_codigo": "topologia",
+      "requerido": true,
+      "orden": 3
+    },
+    {
+      "category_slug": "ups",
+      "attribute_codigo": "tomas_cantidad",
+      "requerido": false,
+      "orden": 4
+    },
+    {
+      "category_slug": "ups",
+      "attribute_codigo": "tipo_toma",
+      "requerido": false,
+      "orden": 5
+    },
+    {
+      "category_slug": "ups",
+      "attribute_codigo": "autonomia_min",
+      "requerido": false,
+      "orden": 6
+    },
+    {
+      "category_slug": "ups",
+      "attribute_codigo": "rackeable",
+      "requerido": false,
+      "orden": 7
+    },
+    {
+      "category_slug": "estabilizadores",
+      "attribute_codigo": "potencia_w",
+      "requerido": false,
+      "orden": 1
+    },
+    {
+      "category_slug": "estabilizadores",
+      "attribute_codigo": "tomas_cantidad",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "estabilizadores",
+      "attribute_codigo": "tipo_toma",
+      "requerido": false,
+      "orden": 3
+    },
+    {
+      "category_slug": "servicios",
+      "attribute_codigo": "periodicidad",
+      "requerido": false,
+      "orden": 1
+    },
+    {
+      "category_slug": "servicios",
+      "attribute_codigo": "almacenamiento_gb",
+      "requerido": false,
+      "orden": 2
+    },
+    {
+      "category_slug": "servicios",
+      "attribute_codigo": "cuentas_correo",
+      "requerido": false,
+      "orden": 3
+    },
+    {
+      "category_slug": "servicios",
+      "attribute_codigo": "dominios_incluidos",
+      "requerido": false,
+      "orden": 4
+    },
+    {
+      "category_slug": "servicios",
+      "attribute_codigo": "soporte_incluido",
+      "requerido": false,
+      "orden": 5
+    }
+  ],
+  "tags": [
+    {
+      "slug": "gamer",
+      "nombre": "Gamer"
+    },
+    {
+      "slug": "empresarial",
+      "nombre": "Empresarial"
+    },
+    {
+      "slug": "home-office",
+      "nombre": "Home office"
+    },
+    {
+      "slug": "poe",
+      "nombre": "PoE"
+    },
+    {
+      "slug": "rackeable",
+      "nombre": "Rackeable"
+    },
+    {
+      "slug": "oferta",
+      "nombre": "Oferta"
+    },
+    {
+      "slug": "nuevo-ingreso",
+      "nombre": "Nuevo ingreso"
+    },
+    {
+      "slug": "mas-vendido",
+      "nombre": "Más vendido"
+    },
+    {
+      "slug": "exterior",
+      "nombre": "Para exterior"
+    }
+  ],
+  "enums": {
+    "product_tipo": [
+      "fisico",
+      "digital",
+      "servicio"
+    ],
+    "product_condicion": [
+      "nuevo",
+      "reacondicionado",
+      "open_box"
+    ],
+    "product_disponibilidad": [
+      "stock_propio",
+      "bajo_pedido",
+      "importacion"
+    ],
+    "product_estado": [
+      "borrador",
+      "publicado",
+      "agotado",
+      "descontinuado"
+    ],
+    "attribute_tipo": [
+      "texto",
+      "numero",
+      "booleano",
+      "seleccion",
+      "multi_seleccion"
+    ],
+    "moneda": [
+      "PEN",
+      "USD"
+    ]
+  },
+  "sku_pattern": "ZTK-{CAT}-{MARCA}-{NNNN}",
+  "ejemplos_producto": [
+    {
+      "slug": "laptop-hp-probook-450-g10",
+      "nombre": "Laptop HP ProBook 450 G10 15.6\"",
+      "category_slug": "laptops-estandar",
+      "brand_slug": "hp",
+      "tipo": "fisico",
+      "condicion": "nuevo",
+      "mpn": "8A4Y5LA",
+      "garantia_meses": 12,
+      "disponibilidad": "bajo_pedido",
+      "dias_entrega": 5,
+      "estado": "publicado",
+      "tags": [
+        "empresarial"
+      ],
+      "atributos": {
+        "procesador_marca": "Intel",
+        "procesador_modelo": "Core i5-1335U",
+        "ram_gb": 16,
+        "ram_tipo": "DDR4",
+        "almacenamiento_gb": 512,
+        "almacenamiento_tipo": "SSD NVMe",
+        "pantalla_pulgadas": 15.6,
+        "resolucion": "Full HD",
+        "sistema_operativo": "Windows 11 Pro",
+        "peso_kg": 1.79
+      },
+      "variantes": [
+        {
+          "sku": "ZTK-LAP-HP-0001",
+          "nombre_variante": "16 GB / 512 GB",
+          "precio_neto": 2711.8644,
+          "moneda": "PEN",
+          "unidad_medida": "NIU",
+          "tipo_afectacion_igv": "10",
+          "stock": 0,
+          "es_default": true
+        }
+      ]
+    },
+    {
+      "slug": "cable-utp-cat6-satra-cobre-caja-305m",
+      "nombre": "Cable UTP Cat6 Satra Cobre Puro Interior Caja 305 m",
+      "category_slug": "cable-utp",
+      "brand_slug": "satra",
+      "tipo": "fisico",
+      "condicion": "nuevo",
+      "garantia_meses": 0,
+      "disponibilidad": "stock_propio",
+      "estado": "publicado",
+      "tags": [],
+      "atributos": {
+        "categoria_cable": "Cat6",
+        "blindaje": "UTP",
+        "material_conductor": "Cobre puro",
+        "uso": "Interior",
+        "longitud_m": 305,
+        "color_producto": "Azul",
+        "awg": 23,
+        "presentacion": "Caja 305 m"
+      },
+      "variantes": [
+        {
+          "sku": "ZTK-UTP-SAT-0001",
+          "nombre_variante": "Azul / Caja 305 m",
+          "precio_neto": 466.1017,
+          "moneda": "PEN",
+          "unidad_medida": "BX",
+          "tipo_afectacion_igv": "10",
+          "stock": 12,
+          "stock_minimo": 3,
+          "es_default": true
+        },
+        {
+          "sku": "ZTK-UTP-SAT-0002",
+          "nombre_variante": "Gris / Caja 305 m",
+          "precio_neto": 466.1017,
+          "moneda": "PEN",
+          "unidad_medida": "BX",
+          "tipo_afectacion_igv": "10",
+          "stock": 5,
+          "stock_minimo": 3,
+          "es_default": false
+        }
+      ]
+    },
+    {
+      "slug": "ponchadora-rj45-rj11-trinquete",
+      "nombre": "Ponchadora Profesional RJ45 / RJ11 con Trinquete",
+      "category_slug": "ponchadoras",
+      "brand_slug": "generico",
+      "tipo": "fisico",
+      "condicion": "nuevo",
+      "garantia_meses": 3,
+      "disponibilidad": "stock_propio",
+      "estado": "publicado",
+      "tags": [],
+      "atributos": {
+        "tipo_herramienta": "Ponchadora",
+        "compatibilidad": [
+          "RJ45",
+          "RJ11"
+        ],
+        "trinquete": true,
+        "material": "Acero con mango ergonómico"
+      },
+      "variantes": [
+        {
+          "sku": "ZTK-PON-GEN-0001",
+          "precio_neto": 38.1356,
+          "moneda": "PEN",
+          "unidad_medida": "NIU",
+          "tipo_afectacion_igv": "10",
+          "stock": 24,
+          "stock_minimo": 6,
+          "es_default": true
+        }
+      ]
+    },
+    {
+      "slug": "hosting-cpanel-basico",
+      "nombre": "Hosting cPanel — Plan Básico",
+      "category_slug": "hosting",
+      "brand_slug": null,
+      "tipo": "servicio",
+      "condicion": "nuevo",
+      "disponibilidad": "stock_propio",
+      "estado": "publicado",
+      "tags": [],
+      "atributos": {
+        "periodicidad": "Mensual",
+        "almacenamiento_gb": 10,
+        "cuentas_correo": 5,
+        "dominios_incluidos": 1,
+        "soporte_incluido": "Soporte por WhatsApp en horario de oficina"
+      },
+      "variantes": [
+        {
+          "sku": "ZTK-HOS-ZTK-0001",
+          "nombre_variante": "Mensual",
+          "precio_neto": 66.9492,
+          "moneda": "PEN",
+          "unidad_medida": "ZZ",
+          "tipo_afectacion_igv": "10",
+          "es_default": true
+        }
+      ]
+    }
+  ]
+}

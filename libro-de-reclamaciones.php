@@ -16,7 +16,7 @@ define('DOMINIO_PERMITIDO', 'zentek360.com');
 define('EMPRESA_RAZON_SOCIAL', 'ZENTEK360 S.A.C.S.');
 define('EMPRESA_RUC',          '20616110099');
 define('EMPRESA_DIRECCION',    'AV. REPUBLICA DE CHILE NRO. 324 INT. 601 URB. SANTA BEATRIZ (EDIFICIO POLARIS) LIMA - LIMA - JESUS MARIA');
-define('EMPRESA_EMAIL',        'info@zentek360.com');
+define('EMPRESA_EMAIL',        'comercial@zentek360.com');
 
 $smtpConfigFile = __DIR__ . '/config.smtp.php';
 if (file_exists($smtpConfigFile)) require $smtpConfigFile;

@@ -162,7 +162,7 @@ El pie de página consolida la legitimidad y formalidad legal de la marca frente
 Fábrica de Software a la Medida, Consultoría en Arquitectura Cloud, Ciberseguridad Empresarial y Soluciones de Transformación Digital Global-Local.
 
 ## Correo Electrónico Oficial de Contacto
-`info@zentek360.com`
+`comercial@zentek360.com`
 
 ## Sede Tecnológica y Operaciones Centrales
 `[Llenar Dirección de Zentek360]`
