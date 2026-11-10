@@ -233,3 +233,45 @@ body {
     object-position: center center;
   }
 }
+
+/* -- ISO 20000-1 badge -- */
+/* Hero: white plate keeps the blue pill and accreditation logos legible over the photo */
+.iso-badge-plate {
+  position: absolute;
+  right: clamp(12px, 3vw, 40px);
+  bottom: clamp(12px, 4vh, 40px);
+  z-index: 2;
+  display: block;
+  width: clamp(112px, 15vw, 230px);
+  padding: clamp(5px, .8vw, 10px);
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 0 0 1px rgba(11, 20, 44, .08), 0 10px 30px rgba(11, 20, 44, .28);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.iso-badge-plate:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 0 1px rgba(11, 20, 44, .08), 0 14px 36px rgba(11, 20, 44, .34);
+}
+.iso-badge-plate img { display: block; width: 100%; height: auto; }
+
+/* Footer: white background, original colors */
+.iso-footer-strip {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(11, 20, 44, .08);
+}
+.iso-footer-badge { width: 150px; height: auto; flex-shrink: 0; }
+.iso-footer-caption { font-size: 13.5px; line-height: 1.5; color: rgba(11, 20, 44, .6); }
+.iso-footer-caption strong { display: block; color: #0b142c; font-weight: 700; }
+
+@media (max-width: 767px) {
+  .iso-badge-plate { right: 8px; bottom: 8px; width: 104px; border-radius: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .iso-badge-plate { transition: none; }
+  .iso-badge-plate:hover { transform: none; }
+}
