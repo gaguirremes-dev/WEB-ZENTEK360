@@ -10,6 +10,7 @@ $destacados = tienda_listar_productos($pdo, ['destacado' => true]);
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<base href="https://zentek360.com/">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tienda ZENTEK360 — Cómputo, Redes, Seguridad y más</title>
 <meta name="description" content="Catálogo de equipos de cómputo, redes, cableado, videovigilancia y energía. Consulta precio y stock, y cotiza directo por WhatsApp.">

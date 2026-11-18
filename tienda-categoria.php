@@ -50,6 +50,7 @@ $marcasDisponibles = $pdo->query("SELECT DISTINCT b.* FROM brands b JOIN product
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<base href="https://zentek360.com/">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= htmlspecialchars($titulo) ?> | Tienda ZENTEK360</title>
 <meta name="description" content="<?= htmlspecialchars($titulo) ?> — consulta precio y stock, cotiza por WhatsApp.">

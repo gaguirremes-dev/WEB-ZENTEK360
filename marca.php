@@ -13,6 +13,7 @@ $productos = $marca ? tienda_listar_productos($pdo, ['brand_id' => $marca['id']]
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<base href="https://zentek360.com/">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= $marca ? htmlspecialchars($marca['nombre']) . ' | Tienda ZENTEK360' : 'Marca no encontrada | ZENTEK360' ?></title>
 <meta name="robots" content="<?= $marca ? 'index, follow' : 'noindex, follow' ?>">

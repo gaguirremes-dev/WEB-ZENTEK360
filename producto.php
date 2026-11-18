@@ -38,6 +38,7 @@ if ($producto) {
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<base href="https://zentek360.com/">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= $producto ? htmlspecialchars($producto['meta_title'] ?: $producto['nombre']) . ' | ZENTEK360' : 'Producto no encontrado | ZENTEK360' ?></title>
 <meta name="description" content="<?= htmlspecialchars($producto['meta_description'] ?? ($producto['descripcion_corta'] ?? 'Catálogo ZENTEK360')) ?>">
