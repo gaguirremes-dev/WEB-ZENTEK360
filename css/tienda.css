@@ -1,0 +1,36 @@
+/* Estilos de la Tienda (tienda.php, tienda-categoria.php, producto.php, marca.php) */
+
+.tienda-hero { background: #0b142c; padding: 150px 0 50px; }
+
+.depto-tile {
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 18px 10px; border-radius: 12px;
+  background: #fff; border: 1px solid rgba(11,20,44,.08);
+  color: #0b142c; font-size: 13px; font-weight: 700;
+  transition: transform .2s ease, box-shadow .2s ease, color .2s ease;
+}
+.depto-tile:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(11,20,44,.1); color: #f3580e; }
+
+.producto-card {
+  border: 1px solid rgba(11,20,44,.08); border-radius: 16px; overflow: hidden;
+  background: #fff; display: flex; flex-direction: column;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.producto-card:hover { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(11,20,44,.12); }
+.producto-img { width: 100%; aspect-ratio: 1/1; object-fit: cover; background: #f5f6fa; display: block; }
+
+.stock-badge { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+.stock-ok   { background: #e3f7e8; color: #1a7a35; }
+.stock-off  { background: #fde8e4; color: #a3291a; }
+.stock-warn { background: #fff3cd; color: #8a6400; }
+
+.filtro-chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px;
+  border-radius: 999px; border: 1px solid rgba(11,20,44,.12); font-size: 12.5px;
+  color: #0b142c99; background: #fff; cursor: pointer;
+}
+.filtro-chip.activo { border-color: #f3580e; color: #f3580e; font-weight: 700; }
+
+.breadcrumb { font-size: 12.5px; color: #0b142c80; }
+.breadcrumb a { color: #0b142c80; text-decoration: none; }
+.breadcrumb a:hover { color: #f3580e; }

@@ -3,4 +3,4 @@ deployment:
     - export DEPLOYPATH=/home/zentek/public_html/
     # rsync (not `cp -R *`) so dotfiles like .htaccess are deployed, while the
     # server-side secrets and the claims records are never touched by a deploy.
-    - /usr/bin/rsync -a --exclude='.git/' --exclude='.gitignore' --exclude='.vscode/' --exclude='config.smtp.php' --exclude='reclamaciones/' --exclude='cpanel.yml' --exclude='*.md' --exclude='optimize_assets.py' ./ "$DEPLOYPATH"
+    - /usr/bin/rsync -a --exclude='.git/' --exclude='.gitignore' --exclude='.vscode/' --exclude='config.smtp.php' --exclude='config.tienda.php' --exclude='reclamaciones/' --exclude='images/tienda-productos/' --exclude='cpanel.yml' --exclude='*.md' --exclude='optimize_assets.py' --exclude='src/' --exclude='build.php' --exclude='docs/' --exclude='assets/' ./ "$DEPLOYPATH"

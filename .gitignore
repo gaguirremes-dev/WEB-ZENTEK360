@@ -1,9 +1,20 @@
 # Secrets — never commit. Copy config.smtp.example.php and fill it in locally.
 config.smtp.php
 
+# Secrets — never commit. Copy config.tienda.example.php and fill it in locally.
+config.tienda.php
+
 # Runtime data written by libro-de-reclamaciones.php
 reclamaciones/
+
+# Product photos uploaded live through the admin panel — not part of the repo
+images/tienda-productos/
 
 # OS / editor noise
 .DS_Store
 Thumbs.db
+
+# Herramientas locales del agente/editor, no son parte del sitio
+.atl/
+.claude/
+.vscode/

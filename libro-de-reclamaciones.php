@@ -782,8 +782,10 @@ if (isset($_GET['ok']) && !empty($_SESSION['reclamo_success'])) {
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libro de Reclamaciones — ZENTEK360</title>
-    <meta name="description" content="Libro de Reclamaciones Virtual de ZENTEK360 S.A.C.S. Conforme al Código de Protección al Consumidor Ley N° 29571.">
+    <title>Libro de Reclamaciones Virtual — ZENTEK360 Perú</title>
+    <meta name="description" content="Presenta tu reclamo o queja en el Libro de Reclamaciones Virtual de ZENTEK360 S.A.C.S., conforme al Código de Protección y Defensa del Consumidor, Ley N° 29571.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://zentek360.com/libro-de-reclamaciones.php">
     <link rel="icon" type="image/jpeg" href="images/FAVICON - ZENTEK 360.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">

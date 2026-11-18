@@ -166,6 +166,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+<!-- ═══════════════════════
+     HEADER
+═══════════════════════ -->
 <header id="main-nav" class="fixed top-0 inset-x-0 z-[900] bg-white border-b border-transparent">
   <div class="max-w-[1320px] mx-auto px-6 lg:px-10 h-full flex items-center justify-between gap-6">
 
@@ -193,9 +196,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="index.html#inicio"      class="nav-link text-[13.5px] font-medium text-[#0b142c]/65 hover:text-[#0b142c] transition-colors duration-200">Inicio</a>
       <a href="index.html#metodologia" class="nav-link text-[13.5px] font-medium text-[#0b142c]/65 hover:text-[#0b142c] transition-colors duration-200">Nosotros</a>
       <a href="index.html#proyectos"   class="nav-link text-[13.5px] font-medium text-[#0b142c]/65 hover:text-[#0b142c] transition-colors duration-200">Proyectos</a>
+      <a href="/tienda" class="nav-link text-[13.5px] font-medium text-[#0b142c]/65 hover:text-[#0b142c] transition-colors duration-200">Tienda</a>
       <a href="index.html#contacto"    class="nav-link text-[13.5px] font-medium text-[#0b142c]/65 hover:text-[#0b142c] transition-colors duration-200">Contacto</a>
-      <a href="https://rrhh.zentek360.com" target="_blank" rel="noopener noreferrer"
-         class="text-[13.5px] font-medium text-aux2 hover:text-[#0b142c] transition-colors duration-200">Intranet ↗</a>
     </nav>
 
     <!-- CTA + hamburger -->
@@ -215,6 +217,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </header>
+
+<!-- Menú móvil -->
+<div id="mobile-menu" class="fixed inset-0 bg-white z-[899] flex-col items-center justify-center gap-8 pt-[90px]" role="dialog" aria-modal="true">
+  <a href="index.html#inicio"      onclick="closeMob()" class="text-[22px] font-semibold text-primary hover:text-secondary transition-colors">Inicio</a>
+  <a href="index.html#metodologia" onclick="closeMob()" class="text-[22px] font-semibold text-primary hover:text-secondary transition-colors">Nosotros</a>
+  <a href="index.html#proyectos"   onclick="closeMob()" class="text-[22px] font-semibold text-primary hover:text-secondary transition-colors">Proyectos</a>
+  <a href="/tienda" class="text-[22px] font-semibold text-primary hover:text-secondary transition-colors">Tienda</a>
+  <a href="index.html#contacto"    onclick="closeMob()" class="text-[22px] font-semibold text-primary hover:text-secondary transition-colors">Contacto</a>
+  <a href="index.html#contacto" onclick="closeMob()"
+     class="mt-2 bg-secondary hover:bg-[#d94d0b] text-white text-[16px] font-semibold px-9 py-4 rounded-xl no-underline transition-colors">
+    Solicitar Consultoría
+  </a>
+</div>
 
 <!-- ═══════════════════════
      HERO
@@ -485,6 +500,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 
+<!-- ═══════════════════════
+     FOOTER
+═══════════════════════ -->
 <footer class="bg-white border-t-4 border-secondary">
 
   <!-- Logo + descripción arriba -->
@@ -525,18 +543,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><a href="#"            class="text-[13px] text-primary/55 hover:text-secondary transition-colors duration-200 no-underline">Política de Privacidad</a></li>
           <li><a href="#"            class="text-[13px] text-primary/55 hover:text-secondary transition-colors duration-200 no-underline">Términos de Servicio</a></li>
         </ul>
+        <img src="images/certificaciones/iso-20000-1.svg" width="648" height="318"
+             alt="Certificación ISO 20000-1 – Sistema de Gestión de Servicios de TI"
+             decoding="async" loading="lazy" class="mt-6 w-[230px] h-auto">
       </div>
 
       <!-- Columna 2: Servicios -->
       <div>
         <h4 class="text-[11px] font-bold text-primary uppercase tracking-[.18em] mb-6">Servicios</h4>
         <ul class="space-y-3 list-none">
+          <li><a href="software-rrhh-smeta.html" class="text-[13px] text-primary/55 hover:text-secondary transition-colors duration-200 no-underline">Software de RRHH para auditorías SMETA</a></li>
           <li><a href="index.html#contacto" class="text-[13px] text-primary/55 hover:text-secondary transition-colors duration-200 no-underline">Desarrollo de Software</a></li>
           <li><a href="index.html#contacto" class="text-[13px] text-primary/55 hover:text-secondary transition-colors duration-200 no-underline">Automatización de Procesos</a></li>
           <li><a href="index.html#contacto" class="text-[13px] text-primary/55 hover:text-secondary transition-colors duration-200 no-underline">Inteligencia Artificial</a></li>
           <li><a href="index.html#contacto" class="text-[13px] text-primary/55 hover:text-secondary transition-colors duration-200 no-underline">Integración de Sistemas</a></li>
-          <li><a href="index.html#contacto" class="text-[13px] text-primary/55 hover:text-secondary transition-colors duration-200 no-underline">Cloud Computing</a></li>
-          <li><a href="index.html#contacto" class="text-[13px] text-primary/55 hover:text-secondary transition-colors duration-200 no-underline">Ciberseguridad</a></li>
         </ul>
       </div>
 

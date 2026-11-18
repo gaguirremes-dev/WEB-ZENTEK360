@@ -32,6 +32,24 @@ DirectoryIndex index.html
   # es configuracion del servidor y puede cambiar sin aviso; con esta regla el
   # bloqueo viaja con el repo. Sin el, el historial completo seria descargable.
   RewriteRule (^|/)\.git - [F,L]
+
+  # URLs amigables de la Tienda (docs/ZENTEK360-catalogo-spec.md, sección 7).
+  # El slug de categoría es único en toda la taxonomía, así que alcanza con
+  # tomar siempre el último segmento — departamento/categoria son solo
+  # cosméticos en la URL.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^tienda/?$ tienda.php [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^tienda/([^/]+)/?$ tienda-categoria.php?cat=$1 [L,QSA]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^tienda/[^/]+/([^/]+)/?$ tienda-categoria.php?cat=$1 [L,QSA]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^tienda/[^/]+/[^/]+/([^/]+)/?$ tienda-categoria.php?cat=$1 [L,QSA]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^producto/([^/]+)/?$ producto.php?slug=$1 [L,QSA]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^marca/([^/]+)/?$ marca.php?slug=$1 [L,QSA]
 </IfModule>
 
 # ── 4. CABECERAS DE SEGURIDAD ────────────────────
@@ -40,6 +58,9 @@ DirectoryIndex index.html
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  # El sitio ya fuerza HTTPS via redirect 301; HSTS evita que el navegador
+  # intente siquiera la version http en visitas futuras.
+  Header always set Strict-Transport-Security "max-age=31536000"
 </IfModule>
 
 # ── 5. CACHÉ DE ACTIVOS ESTÁTICOS ───────────────
