@@ -2,13 +2,20 @@
 - Quita fondos negros de los robots (flood-fill desde bordes -> conserva negros internos)
 - Recorta al contorno, redimensiona y exporta WebP ligero
 - Comprime los flyers de servicios/publicidad
+
+NOTA: las poses del Z-BOT que se ven hoy en el sitio (dedos-arriba, pulgar-arriba,
+tablet, proyectos, decorativa, point) se reemplazaron a mano con fotos nuevas y
+ya NO salen de este script. Los frames 1.png y 3.png originales se borraron
+porque dejaron de usarse. Este script queda para regenerar "scene" (6.png, sin
+usar todavía) y los flyers de servicios/publicidad si cambian los originales.
 """
 import os
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-OUT_BOT = os.path.join(ROOT, "images", "zbot")
+ORIGINALES = os.path.join(ROOT, "images", "originales")
+OUT_BOT = os.path.join(ROOT, "images", "mascota")
 OUT_PROD = os.path.join(ROOT, "images", "productos")
 os.makedirs(OUT_BOT, exist_ok=True)
 os.makedirs(OUT_PROD, exist_ok=True)
@@ -57,7 +64,7 @@ def process_bot(name, src, crop_bottom=0.0, target_h=1000, remove_bg=True):
     im = trim_alpha(im, pad=6)
     dst = os.path.join(OUT_BOT, name + ".webp")
     im.save(dst, "WEBP", quality=86, method=6)
-    print(f"  zbot/{name}.webp  {im.size[0]}x{im.size[1]}  {os.path.getsize(dst)//1024}KB")
+    print(f"  mascota/{name}.webp  {im.size[0]}x{im.size[1]}  {os.path.getsize(dst)//1024}KB")
 
 
 def process_prod(name, src, target_w=780, q=80):
@@ -69,25 +76,19 @@ def process_prod(name, src, target_w=780, q=80):
     print(f"  productos/{name}.webp  {im.size[0]}x{im.size[1]}  {os.path.getsize(dst)//1024}KB")
 
 
-A = os.path.join(ROOT, "assets")
-print("== Robots ==")
-process_bot("thumbs", os.path.join(A, "AGENTE Z-BOT", "1.png"), crop_bottom=0.07)
-process_bot("wink", os.path.join(A, "AGENTE Z-BOT", "2.png"), remove_bg=False)  # ya transparente
-process_bot("phone", os.path.join(A, "AGENTE Z-BOT", "3.png"))
-process_bot("sit", os.path.join(A, "AGENTE Z-BOT", "4.png"))
-process_bot("point", os.path.join(A, "AGENTE Z-BOT", "5.png"))
-# 6 = escena con pedestal; conservar fondo, solo comprimir
-im6 = Image.open(os.path.join(A, "AGENTE Z-BOT", "6.png")).convert("RGB")
+M = os.path.join(ORIGINALES, "mascota")
+print("== Robot (solo 'scene', sin usar en el sitio todavia) ==")
+im6 = Image.open(os.path.join(M, "6.png")).convert("RGB")
 s = 1200 / im6.height
 im6 = im6.resize((int(im6.width * s), 1200), Image.LANCZOS)
 d6 = os.path.join(OUT_BOT, "scene.webp")
 im6.save(d6, "WEBP", quality=84, method=6)
-print(f"  zbot/scene.webp  {im6.size[0]}x{im6.size[1]}  {os.path.getsize(d6)//1024}KB")
+print(f"  mascota/scene.webp  {im6.size[0]}x{im6.size[1]}  {os.path.getsize(d6)//1024}KB")
 
-print("== Productos ==")
-process_prod("corporativo", os.path.join(A, "servicios", "CORPORATIVO.jpg"))
-process_prod("empresarial", os.path.join(A, "servicios", "EMPRESARIAL.jpg"))
-process_prod("emprendedores", os.path.join(A, "servicios", "EMPRENDEDORES.jpg"))
-process_prod("mype", os.path.join(A, "servicios", "MYPE.jpg"))
-process_prod("publicidad", os.path.join(A, "publicidad", "ZENTEK360v1.0.jpeg"))
+print("== Productos (paquetes de la portada) ==")
+process_prod("corporativo", os.path.join(ORIGINALES, "servicios", "CORPORATIVO.jpg"))
+process_prod("empresarial", os.path.join(ORIGINALES, "servicios", "EMPRESARIAL.jpg"))
+process_prod("emprendedores", os.path.join(ORIGINALES, "servicios", "EMPRENDEDORES.jpg"))
+process_prod("mype", os.path.join(ORIGINALES, "servicios", "MYPE.jpg"))
+process_prod("publicidad", os.path.join(ORIGINALES, "publicidad", "ZENTEK360v1.0.jpeg"))
 print("Listo.")

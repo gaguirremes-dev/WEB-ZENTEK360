@@ -897,7 +897,7 @@ if (isset($_GET['ok']) && !empty($_SESSION['reclamo_success'])) {
 <header class="no-print w-full bg-white border-b border-primary/8 sticky top-0 z-50" style="box-shadow:0 1px 12px rgba(11,20,44,.06);">
     <div class="max-w-6xl mx-auto px-5 lg:px-8 h-16 flex items-center justify-between gap-4">
         <a href="index.html" class="flex items-center gap-3 flex-shrink-0" aria-label="ZENTEK360 — Inicio">
-            <img src="images/ZENTEK360.png" alt="ZENTEK360" class="h-10 w-auto object-contain"
+            <img src="images/zentek360_logo_sinfondo.png" alt="ZENTEK360" class="h-10 w-auto object-contain"
                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="items-center gap-2.5" style="display:none">
                 <svg viewBox="0 0 44 44" width="44" height="44">
