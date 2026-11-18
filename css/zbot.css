@@ -201,14 +201,14 @@
   position: relative;
   overflow: hidden;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 }
 .zbot4-robot {
-  height: 65%;
-  width: 65%;
+  height: 80%;
+  width: 80%;
   object-fit: contain;
-  object-position: bottom center;
+  object-position: center center;
   filter: drop-shadow(0 20px 60px rgba(0,0,0,.55)) drop-shadow(0 0 40px rgba(243,88,14,.18));
   animation: float-y 5s ease-in-out infinite;
   animation-delay: 1s;
