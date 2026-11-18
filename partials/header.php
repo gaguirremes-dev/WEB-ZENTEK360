@@ -23,7 +23,7 @@ $claseTiendaMobile = $navActive === 'tienda'
     <!-- IMAGOTIPO completo: símbolo circular Z + ZENTEK360 + DESARROLLO TECNOLÓGICO -->
     <a href="<?= $BASE ?: '/' ?>" aria-label="ZENTEK360 — Inicio" class="flex-shrink-0 flex items-center gap-3">
       <!-- Imagen PNG primaria -->
-      <img id="logo-img" src="images/zentek360_logo_sinfondo.png" width="3125" height="778" alt="ZENTEK360 Desarrollo Tecnológico" class="h-[56px] w-auto object-contain"
+      <img id="logo-img" src="/images/zentek360_logo_sinfondo.png" width="3125" height="778" alt="ZENTEK360 Desarrollo Tecnológico" class="h-[56px] w-auto object-contain"
            onerror="document.getElementById('logo-img').style.display='none'; document.getElementById('logo-fallback').style.display='flex';">
       <!-- Fallback HTML imagotipo -->
       <div id="logo-fallback" class="items-center gap-3" style="display:none">

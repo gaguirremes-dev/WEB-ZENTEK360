@@ -50,7 +50,6 @@ $marcasDisponibles = $pdo->query("SELECT DISTINCT b.* FROM brands b JOIN product
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<base href="https://zentek360.com/">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= htmlspecialchars($titulo) ?> | Tienda ZENTEK360</title>
 <meta name="description" content="<?= htmlspecialchars($titulo) ?> — consulta precio y stock, cotiza por WhatsApp.">
@@ -74,12 +73,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-NZGL7RKL');</script>
 <!-- End Google Tag Manager -->
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/tienda.css">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/tienda.css">
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZGL7RKL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<?php $BASE = 'index.html'; $navActive = 'tienda'; include __DIR__ . '/partials/header.php'; ?>
+<?php $BASE = '/index.html'; $navActive = 'tienda'; include __DIR__ . '/partials/header.php'; ?>
 
 <section class="tienda-hero" style="padding:140px 0 24px;">
   <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
@@ -144,6 +143,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </section>
 
 <?php include __DIR__ . '/partials/footer.php'; ?>
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>

@@ -38,7 +38,6 @@ if ($producto) {
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<base href="https://zentek360.com/">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= $producto ? htmlspecialchars($producto['meta_title'] ?: $producto['nombre']) . ' | ZENTEK360' : 'Producto no encontrado | ZENTEK360' ?></title>
 <meta name="description" content="<?= htmlspecialchars($producto['meta_description'] ?? ($producto['descripcion_corta'] ?? 'Catálogo ZENTEK360')) ?>">
@@ -62,12 +61,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-NZGL7RKL');</script>
 <!-- End Google Tag Manager -->
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/tienda.css">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/tienda.css">
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZGL7RKL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<?php $BASE = 'index.html'; $navActive = 'tienda'; include __DIR__ . '/partials/header.php'; ?>
+<?php $BASE = '/index.html'; $navActive = 'tienda'; include __DIR__ . '/partials/header.php'; ?>
 
 <section class="bg-canvas" style="padding-top:120px;">
   <div class="max-w-[1100px] mx-auto px-6 lg:px-10 py-10">
@@ -81,11 +80,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
       <div>
         <?php if ($imagenes): ?>
-          <img src="images/tienda-productos/<?= htmlspecialchars($imagenes[0]['url']) ?>" alt="<?= htmlspecialchars($producto['nombre']) ?>" class="w-full rounded-2xl bg-white" style="aspect-ratio:1/1;object-fit:cover;">
+          <img src="/images/tienda-productos/<?= htmlspecialchars($imagenes[0]['url']) ?>" alt="<?= htmlspecialchars($producto['nombre']) ?>" class="w-full rounded-2xl bg-white" style="aspect-ratio:1/1;object-fit:cover;">
           <?php if (count($imagenes) > 1): ?>
           <div class="flex gap-3 mt-3 flex-wrap">
             <?php foreach (array_slice($imagenes, 1) as $img): ?>
-              <img src="images/tienda-productos/<?= htmlspecialchars($img['url']) ?>" alt="" class="rounded-lg" style="width:72px;height:72px;object-fit:cover;">
+              <img src="/images/tienda-productos/<?= htmlspecialchars($img['url']) ?>" alt="" class="rounded-lg" style="width:72px;height:72px;object-fit:cover;">
             <?php endforeach; ?>
           </div>
           <?php endif; ?>
@@ -177,6 +176,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </section>
 
 <?php include __DIR__ . '/partials/footer.php'; ?>
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>

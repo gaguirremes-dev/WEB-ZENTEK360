@@ -14,7 +14,7 @@ $BASE = $BASE ?? '';
   <div class="max-w-[1320px] mx-auto px-6 lg:px-10 pt-16 pb-10 border-b border-primary/8">
     <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
       <a href="<?= $BASE ?: '/' ?>" aria-label="ZENTEK360" class="flex items-center gap-3 flex-shrink-0">
-        <img src="images/zentek360_logo_sinfondo.png" width="3125" height="778" alt="ZENTEK360" class="h-[52px] w-auto object-contain"
+        <img src="/images/zentek360_logo_sinfondo.png" width="3125" height="778" alt="ZENTEK360" class="h-[52px] w-auto object-contain"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="items-center gap-3" style="display:none">
           <svg viewBox="0 0 56 56" width="56" height="56">
@@ -48,7 +48,7 @@ $BASE = $BASE ?? '';
           <li><a href="#"            class="text-[13px] text-primary/55 hover:text-secondary transition-colors duration-200 no-underline">Política de Privacidad</a></li>
           <li><a href="#"            class="text-[13px] text-primary/55 hover:text-secondary transition-colors duration-200 no-underline">Términos de Servicio</a></li>
         </ul>
-        <img src="images/certificaciones/iso-20000-1.svg" width="648" height="318"
+        <img src="/images/certificaciones/iso-20000-1.svg" width="648" height="318"
              alt="Certificación ISO 20000-1 – Sistema de Gestión de Servicios de TI"
              decoding="async" loading="lazy" class="mt-6 w-[230px] h-auto">
       </div>

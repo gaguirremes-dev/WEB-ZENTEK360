@@ -7,7 +7,7 @@ $bajoPedido = ($p['disponibilidad'] === 'bajo_pedido');
 <div class="producto-card">
   <a href="/producto/<?= urlencode($p['slug']) ?>" class="producto-card-link">
     <?php if ($p['imagen']): ?>
-      <img class="producto-img" src="images/tienda-productos/<?= htmlspecialchars($p['imagen']) ?>" alt="<?= htmlspecialchars($p['nombre']) ?>" loading="lazy" decoding="async">
+      <img class="producto-img" src="/images/tienda-productos/<?= htmlspecialchars($p['imagen']) ?>" alt="<?= htmlspecialchars($p['nombre']) ?>" loading="lazy" decoding="async">
     <?php else: ?>
       <div class="producto-img"></div>
     <?php endif; ?>

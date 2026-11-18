@@ -10,7 +10,6 @@ $destacados = tienda_listar_productos($pdo, ['destacado' => true]);
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<base href="https://zentek360.com/">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tienda ZENTEK360 — Cómputo, Redes, Seguridad y más</title>
 <meta name="description" content="Catálogo de equipos de cómputo, redes, cableado, videovigilancia y energía. Consulta precio y stock, y cotiza directo por WhatsApp.">
@@ -42,8 +41,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NZGL7RKL');</script>
 <!-- End Google Tag Manager -->
 
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/tienda.css">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/tienda.css">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -51,7 +50,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<?php $BASE = 'index.html'; $navActive = 'tienda'; include __DIR__ . '/partials/header.php'; ?>
+<?php $BASE = '/index.html'; $navActive = 'tienda'; include __DIR__ . '/partials/header.php'; ?>
 
 <section class="tienda-hero">
   <div class="max-w-[1320px] mx-auto px-6 lg:px-10 text-center">
@@ -81,6 +80,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <?php include __DIR__ . '/partials/footer.php'; ?>
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>
