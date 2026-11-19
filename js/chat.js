@@ -33,6 +33,5 @@
   }
 
   setTimeout(addBubble, 700);
-  const iv = setInterval(addBubble, 3200);
-  window.addEventListener('unload', () => clearInterval(iv), { once: true });
+  setInterval(addBubble, 3200);
 })();
