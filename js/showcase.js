@@ -67,6 +67,8 @@
   const lb      = document.getElementById('zb-lightbox');
   const lbImg   = document.getElementById('zb-lb-img');
   const lbCap   = document.getElementById('zb-lb-cap');
+  const lbCta   = document.getElementById('zb-lb-cta');
+  const WHATSAPP_NUMERO = '51964155424';
   let lbOpen    = false;
   let closeTimer = null;
 
@@ -76,6 +78,10 @@
     if (!full || !lb) return;
     if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
     lbImg.src = full; lbImg.alt = title; lbCap.textContent = title;
+    if (lbCta) {
+      const msj = `Hola ZENTEK360, quiero solicitar el ${title}`;
+      lbCta.href = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(msj)}`;
+    }
     lb.hidden = false;
     lbOpen = true; paused = true;
     document.body.style.overflow = 'hidden';
