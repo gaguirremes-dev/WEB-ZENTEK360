@@ -786,7 +786,10 @@ if (isset($_GET['ok']) && !empty($_SESSION['reclamo_success'])) {
     <meta name="description" content="Presenta tu reclamo o queja en el Libro de Reclamaciones Virtual de ZENTEK360 S.A.C.S., conforme al Código de Protección y Defensa del Consumidor, Ley N° 29571.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://zentek360.com/libro-de-reclamaciones.php">
-    <link rel="icon" type="image/jpeg" href="images/FAVICON - ZENTEK 360.jpg">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
