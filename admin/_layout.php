@@ -73,6 +73,7 @@ function admin_nav_link(string $href, string $label, string $clave, string $acti
     <?= admin_nav_link('index.php', 'Productos', 'productos', $activo) ?>
     <?= admin_nav_link('marcas.php', 'Marcas', 'marcas', $activo) ?>
     <?= admin_nav_link('categorias.php', 'Categorías', 'categorias', $activo) ?>
+    <?= admin_nav_link('paquetes.php', 'Paquetes (home)', 'paquetes', $activo) ?>
     <a href="logout.php" class="text-[12px] text-white/45 hover:text-white/80 transition-colors no-underline">Cerrar sesión ↗</a>
   </nav>
 </header>
