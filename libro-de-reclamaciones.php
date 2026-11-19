@@ -790,28 +790,10 @@ if (isset($_GET['ok']) && !empty($_SESSION['reclamo_success'])) {
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=League+Spartan:wght@700;800;900&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        spartan: ['League Spartan', 'sans-serif'],
-                    },
-                    colors: {
-                        primary:   '#0b142c',
-                        secondary: '#f3580e',
-                        canvas:    '#f5f6fa',
-                        ink:       '#374151',
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="css/tailwind.css">
     <style>
         * { box-sizing: border-box; }
         body { background: #f5f6fa; color: #0b142c; font-family: 'Inter', sans-serif; overflow-x: hidden; }

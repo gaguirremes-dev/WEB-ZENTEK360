@@ -18,3 +18,7 @@ Thumbs.db
 .atl/
 .claude/
 .vscode/
+
+# Dependencias de Node para compilar Tailwind — css/tailwind.css (el output)
+# si se sube al repo; el servidor nunca necesita Node.
+node_modules/

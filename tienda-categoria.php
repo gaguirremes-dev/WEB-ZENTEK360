@@ -59,13 +59,7 @@ $marcasDisponibles = $pdo->query("SELECT DISTINCT b.* FROM brands b JOIN product
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=League+Spartan:wght@700;800;900&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = { theme: { extend: {
-    fontFamily: { sans: ['Inter', 'sans-serif'], spartan: ['League Spartan', 'sans-serif'] },
-    colors: { primary: '#0b142c', secondary: '#f3580e', aux: '#d8d7f5', aux2: '#b0aab3', canvas: '#f5f6fa' },
-  } } }
-</script>
+<link rel="stylesheet" href="/css/tailwind.css">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

@@ -43,31 +43,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=League+Spartan:wght@700;800;900&display=swap" rel="stylesheet">
 
-<!-- Tailwind CSS CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
+<!-- Tailwind CSS ya compilado (produccion) -->
+<link rel="stylesheet" href="css/tailwind.css">
 
 <!-- GSAP + ScrollTrigger (showcase orbital Z-BOT) -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        fontFamily: {
-          sans: ['Inter', 'sans-serif'],
-          spartan: ['League Spartan', 'sans-serif'],
-        },
-        colors: {
-          primary:   '#0b142c',
-          secondary: '#f3580e',
-          aux:       '#d8d7f5',
-          aux2:      '#b0aab3',
-          canvas:    '#f5f6fa',
-        },
-      }
-    }
-  }
-</script>
 
 <!-- JSON-LD Organization -->
 <script type="application/ld+json">

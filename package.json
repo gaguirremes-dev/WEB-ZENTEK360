@@ -1,0 +1,11 @@
+{
+  "name": "zentek360-web",
+  "private": true,
+  "description": "Build de Tailwind CSS para el sitio ZENTEK360. No se despliega al servidor (ver cpanel.yml) — el output css/tailwind.css ya compilado si se sube.",
+  "scripts": {
+    "build:css": "tailwindcss -i ./build/tailwind-input.css -o ./css/tailwind.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

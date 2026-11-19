@@ -18,13 +18,7 @@ function admin_nav_link(string $href, string $label, string $clave, string $acti
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = { theme: { extend: {
-    fontFamily: { sans: ['Inter', 'sans-serif'] },
-    colors: { primary: '#0b142c', secondary: '#f3580e', canvas: '#f5f6fa' },
-  } } }
-</script>
+<link rel="stylesheet" href="../css/tailwind.css">
 <style>
   * { box-sizing: border-box; }
   body { margin:0; font-family:'Inter',-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:#f5f6fa; color:#0b142c; }
