@@ -93,6 +93,17 @@
   50%       { transform: translateX(-50%) translateY(-16px); }
 }
 
+/* Canvas de partículas bajo los pies del robot (polvo estelar) — ver js/fx.js */
+.zb-robot-fx {
+  position: absolute;
+  left: 50%;
+  bottom: 2%;
+  width: min(360px, 44vw);
+  height: 170px;
+  transform: translateX(-50%);
+  z-index: 29;
+}
+
 /* Ã“rbita de productos */
 .zb-orbit {
   position: absolute;
@@ -127,6 +138,21 @@
   opacity: 0; transition: opacity .3s ease;
 }
 .zb-prod.is-front figcaption { opacity: 1; }
+
+/* Micro-pulso sincronizado con el flotado del robot (zb-robot-float dura 5.5s) */
+.zb-prod img { animation: zb-prod-pulse 5.5s ease-in-out infinite; }
+.zb-prod:nth-child(1) img { animation-delay: -5.1s; }
+.zb-prod:nth-child(2) img { animation-delay: -4.0s; }
+.zb-prod:nth-child(3) img { animation-delay: -2.9s; }
+.zb-prod:nth-child(4) img { animation-delay: -1.8s; }
+.zb-prod:nth-child(5) img { animation-delay: -0.7s; }
+@keyframes zb-prod-pulse {
+  0%, 100% { filter: brightness(1); }
+  50%      { filter: brightness(1.12); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .zb-prod img { animation: none; }
+}
 
 /* Indicador de scroll */
 .zb-scrollhint {

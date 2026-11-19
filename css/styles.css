@@ -119,6 +119,11 @@ body {
   height: 2px;
   background: linear-gradient(90deg, #f3580e, #d8d7f5);
   margin-top: 27px;
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .tl-connector { transform: scaleX(1); }
 }
 .tl-step { flex: 1; }
 
