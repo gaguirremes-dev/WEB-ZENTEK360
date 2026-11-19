@@ -140,6 +140,7 @@
 }
 .proj-car-prev { left: 14px; }
 .proj-car-next { right: 14px; }
+.proj-car-nav[hidden] { display: none; }
 
 /* Dots */
 .proj-car-dots {
@@ -149,6 +150,7 @@
   display: flex; gap: 7px;
   z-index: 4;
 }
+.proj-car-dots[hidden] { display: none; }
 .proj-car-dot {
   width: 7px; height: 7px;
   border-radius: 50%;
