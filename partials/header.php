@@ -50,7 +50,8 @@ $claseTiendaMobile = $navActive === 'tienda'
 
     <!-- CTA + hamburger -->
     <div class="flex items-center gap-3">
-      <a href="<?= $BASE ?>#contacto"
+      <a href="https://wa.me/51964155424?text=<?= rawurlencode('Hola ZENTEK360, quiero solicitar una consultoría.') ?>"
+         target="_blank" rel="noopener noreferrer"
          class="hidden lg:inline-flex items-center gap-2 bg-secondary hover:bg-[#d94d0b] text-white text-[13.5px] font-semibold px-5 py-[11px] rounded-lg no-underline transition-all duration-200 hover:-translate-y-px hover:shadow-[0_6px_20px_rgba(243,88,14,.35)]">
         Solicitar Consultoría
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M7.5 3l3.5 4-3.5 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -73,7 +74,8 @@ $claseTiendaMobile = $navActive === 'tienda'
   <a href="<?= $BASE ?>#proyectos"   onclick="closeMob()" class="text-[22px] font-semibold text-primary hover:text-secondary transition-colors">Proyectos</a>
   <a href="/tienda" class="<?= $claseTiendaMobile ?>">Tienda</a>
   <a href="<?= $BASE ?>#contacto"    onclick="closeMob()" class="text-[22px] font-semibold text-primary hover:text-secondary transition-colors">Contacto</a>
-  <a href="<?= $BASE ?>#contacto" onclick="closeMob()"
+  <a href="https://wa.me/51964155424?text=<?= rawurlencode('Hola ZENTEK360, quiero solicitar una consultoría.') ?>"
+     target="_blank" rel="noopener noreferrer"
      class="mt-2 bg-secondary hover:bg-[#d94d0b] text-white text-[16px] font-semibold px-9 py-4 rounded-xl no-underline transition-colors">
     Solicitar Consultoría
   </a>
