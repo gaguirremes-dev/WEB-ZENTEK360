@@ -22,30 +22,32 @@
   // Completar con el link real de cada proyecto cuando esté disponible.
   // Los que queden en '' simplemente no muestran el botón "Visitar sitio".
   const URLS = {
-    'Supply360':        '',
-    'Capacita':         '',
-    'Ynsumedic':        '',
-    'Quantuk':          '',
+    'Supply360':        'https://supplylogistic360.com',
+    'Capacita':         'https://somosescuelacapacita.com',
+    'Ynsumedic':        'https://ynsumedic.com',
+    'Quantuk':          'https://quantukperu.com',
     'Flujos N8N':       '',
-    'Convive':          '',
-    'Parkeat':          '',
+    'Convive':          'https://convive360.com',
+    'Parkeat':          'https://parkeatcar.com',
     'Arbicop Tienda':   '',
-    'Tributa':          '',
-    'SSOMA':            '',
-    'TuPerfil360':      '',
-    'Agrosumak':        '',
+    'Tributa':          'https://somostributa.com',
+    'SSOMA':            'https://ssomasafe.com',
+    'TuPerfil360':      'https://tuperfil360.com',
+    'Agrosumak':        'https://agrosumak.com',
+    'TrustAgroExport':  'https://trustagroexport.com',
     'Sitemar RRHH':     '',
-    'Arbicop':          '',
+    'Arbicop':          'https://arbicop.com',
     'Pura Estética':    '',
     'Hosting cPanel':   '',
     'Agente IA':        '',
-    'D. Paulo André':   '',
-    'SureLife360':      '',
-    'Corp. Yanayacu':   '',
-    'Agua Yanayacu':    '',
-    'Yanayacu Clea':    '',
+    'Abubu':            'https://abubu.com.pe',
+    'SureLife360':      'https://surelife360.com',
+    'Corp. Yanayacu':   'https://corporacionyanayacu.com',
+    'Agua Yanayacu':    'https://aguayanayacu.com',
+    'Yanayacu Clea':    'https://yanayacuclean.com',
     'cPanel Hosting':   '',
     'Webmail':          '',
+    'Virgen Asunta':    'https://conciliavirgenasunta.com',
   };
 
   const DESC = {
@@ -61,18 +63,20 @@
     'SSOMA':            'Sistema de gestión de Seguridad, Salud Ocupacional y Medio Ambiente con reportes y seguimiento de incidentes.',
     'TuPerfil360':      'Plataforma de perfil profesional 360° con portafolio, métricas de rendimiento y gestión de talento.',
     'Agrosumak':        'Portal agrícola con gestión de cultivos, trazabilidad de productos y comercialización directa al consumidor.',
+    'TrustAgroExport':  'Sitio corporativo para exportadora agrícola, con certificación ISO 14001, líneas de producto y asistente virtual para consultas de cultivo.',
     'Sitemar RRHH':     'Sistema web de gestión de recursos humanos con nómina, asistencia, evaluaciones y procesos de selección.',
     'Arbicop':          'Sitio web corporativo de alto impacto con CMS personalizado, SEO técnico avanzado y analytics integrado.',
     'Pura Estética':    'Plataforma de reservas y gestión para centros de estética con catálogo de servicios y fidelización de clientes.',
     'Hosting cPanel':   'Infraestructura cloud gestionada con cPanel, monitoreo 24/7, backups automáticos y soporte técnico prioritario.',
     'Agente IA':        'Agente conversacional con IA para atención automatizada multicanal con procesamiento de lenguaje natural.',
-    'D. Paulo André':   'Sitio web profesional con portafolio de servicios, blog y sistema de contacto para consultor independiente.',
+    'Abubu':            'Tienda en línea de ropa, accesorios y juguetes para bebés, con carrito de compras, envíos a todo el país y atención por WhatsApp.',
     'SureLife360':      'Portal de autogestión para asegurados con consultas de pólizas, reporte de siniestros y pagos en línea.',
     'Corp. Yanayacu':   'Plataforma corporativa para gestión de proyectos comunitarios, comunicación y transparencia institucional.',
     'Agua Yanayacu':    'Sitio web de gestión de servicios de agua potable con reportes de consumo y atención al usuario.',
     'Yanayacu Clea':    'Portal de energías limpias con información de proyectos sustentables, impacto ambiental y comunidad.',
     'cPanel Hosting':   'Solución de hosting empresarial con cPanel avanzado, dominios, correos y herramientas de administración web.',
     'Webmail':          'Servicio de correo corporativo con webmail personalizado, filtros antispam y gestión de buzones empresariales.',
+    'Virgen Asunta':    'Centro de conciliación extrajudicial y arbitraje, con especialidades separadas por materia y agenda de consultas en línea.',
   };
 
   const CAT_COLORS = {
@@ -86,6 +90,7 @@
     'Estética':        ['#3c0828','#8e1850'], 'Infraestructura':['#082840','#1068a0'],
     'IA':              ['#0c0828','#281870'], 'Servicios':      ['#1a0830','#481460'],
     'Seguros':         ['#0c0c28','#202060'], 'Ambiental':      ['#082018','#145e3a'],
+    'Legal':           ['#1a1408','#5c4a18'],
   };
   const DEFAULT_COLORS = ['#0c1430','#1a2860'];
 
