@@ -13,7 +13,40 @@
   const descEl    = document.getElementById('proj-lb-desc');
   const counterEl = document.getElementById('proj-lb-counter');
   const closeBtn  = document.getElementById('proj-lb-close');
+  const visitBtn  = document.getElementById('proj-lb-visit');
+  const quoteBtn  = document.getElementById('proj-lb-quote');
   if (!lb) return;
+
+  const WHATSAPP_NUMERO = '51964155424';
+
+  // Completar con el link real de cada proyecto cuando esté disponible.
+  // Los que queden en '' simplemente no muestran el botón "Visitar sitio".
+  const URLS = {
+    'Supply360':        '',
+    'Capacita':         '',
+    'Ynsumedic':        '',
+    'Quantuk':          '',
+    'Flujos N8N':       '',
+    'Convive':          '',
+    'Parkeat':          '',
+    'Arbicop Tienda':   '',
+    'Tributa':          '',
+    'SSOMA':            '',
+    'TuPerfil360':      '',
+    'Agrosumak':        '',
+    'Sitemar RRHH':     '',
+    'Arbicop':          '',
+    'Pura Estética':    '',
+    'Hosting cPanel':   '',
+    'Agente IA':        '',
+    'D. Paulo André':   '',
+    'SureLife360':      '',
+    'Corp. Yanayacu':   '',
+    'Agua Yanayacu':    '',
+    'Yanayacu Clea':    '',
+    'cPanel Hosting':   '',
+    'Webmail':          '',
+  };
 
   const DESC = {
     'Supply360':        'Plataforma logística integral para gestión de cadena de suministro, inventarios y distribución en tiempo real.',
@@ -129,6 +162,17 @@
     tagEl.textContent   = tag;
     titleEl.textContent = title;
     descEl.textContent  = DESC[title] || 'Solución de software a medida desarrollada por el equipo Zentek360.';
+
+    const url = URLS[title];
+    if (url) {
+      visitBtn.href = url;
+      visitBtn.hidden = false;
+    } else {
+      visitBtn.hidden = true;
+    }
+    const msj = `Hola ZENTEK360, quiero cotizar una página como "${title}"`;
+    quoteBtn.href = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(msj)}`;
+
     buildSlides(tag, title, imgSrc);
     goTo(0);
     lb.hidden = false;

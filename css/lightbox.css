@@ -212,6 +212,35 @@
   border-radius: 20px;
   padding: 3px 10px;
 }
+.proj-lb-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+.proj-lb-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all .2s ease;
+}
+.proj-lb-btn-solid {
+  background: #f3580e;
+  color: #fff;
+}
+.proj-lb-btn-solid:hover { background: #d94d0b; }
+.proj-lb-btn-ghost {
+  background: transparent;
+  color: rgba(255,255,255,.75);
+  border: 1px solid rgba(255,255,255,.18);
+}
+.proj-lb-btn-ghost:hover { border-color: rgba(255,255,255,.4); color: #fff; }
+.proj-lb-btn[hidden] { display: none; }
 
 /* â”€â”€ BotÃ³n cerrar â”€â”€ */
 .proj-lb-close {
