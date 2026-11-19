@@ -81,6 +81,7 @@
   if (!reduceMotion) {
     crearEmisorParticulas(document.getElementById('zb-robot-fx'));
     crearEmisorParticulas(document.getElementById('zb-guide-fx'), { porFrame: 0.6, vidaMax: 55 });
+    crearEmisorParticulas(document.getElementById('zb-metodologia-fx'), { porFrame: 0.6, vidaMax: 55 });
   }
 
   // ── El resto son animaciones de scroll con GSAP; si no cargó, se omiten ──
