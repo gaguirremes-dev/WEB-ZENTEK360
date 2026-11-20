@@ -3,7 +3,7 @@
  * Genera los .html públicos (HTML puro, sin PHP) a partir de src/ + partials/.
  * Correr después de editar partials/header.php o partials/footer.php:
  *   php build.php
- * Herramienta de desarrollo — no se despliega al servidor (ver cpanel.yml).
+ * Herramienta de desarrollo — no se despliega al servidor (ver .cpanel.yml).
  */
 
 $paginas = [

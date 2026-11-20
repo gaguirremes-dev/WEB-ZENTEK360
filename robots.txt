@@ -7,6 +7,6 @@ Disallow: /optimize_assets.py
 
 # Archivos de configuración — no indexar
 Disallow: /manifest.json
-Disallow: /cpanel.yml
+Disallow: /.cpanel.yml
 
 Sitemap: https://zentek360.com/sitemap.xml
