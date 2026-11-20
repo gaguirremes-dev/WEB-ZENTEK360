@@ -108,11 +108,11 @@ include __DIR__ . '/_layout.php';
     <input type="hidden" name="csrf" value="<?= htmlspecialchars($_SESSION['csrf']) ?>">
     <div class="flex flex-wrap gap-5 mt-4">
       <?php foreach (PAQUETES as $slug => $nombre): ?>
-        <div class="card" style="width:220px;">
+        <div class="card" style="width:270px;">
           <img src="../images/productos/<?= $slug ?>.webp?t=<?= time() ?>" alt="<?= htmlspecialchars($nombre) ?>"
                class="w-full rounded-xl object-cover mb-3" style="aspect-ratio:4/5;">
           <p class="font-semibold text-primary text-[14px] mb-2"><?= htmlspecialchars($nombre) ?></p>
-          <input type="file" name="<?= $slug ?>" accept=".jpg,.jpeg,.png,.webp">
+          <input type="file" name="<?= $slug ?>" accept=".jpg,.jpeg,.png,.webp" style="width:100%; font-size:12px;">
         </div>
       <?php endforeach; ?>
     </div>
