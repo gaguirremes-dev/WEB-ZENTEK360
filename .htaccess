@@ -8,7 +8,7 @@
 Options -Indexes
 
 # ── 2. DOCUMENTO POR DEFECTO ────────────────────
-DirectoryIndex index.html
+DirectoryIndex index.html index.php
 
 # ── 3. REDIRIGIR www → sin www (canónica) ───────
 # Evita contenido duplicado entre www y sin www.
